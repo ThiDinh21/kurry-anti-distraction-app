@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Alex_move_48x48.png-01002537cc5cf76a830b980aa0203b36.stex"
+path="res://.import/FloorTileset1.png-e5a153dd4b40da53a390e7388cc5f6aa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Alex_move_48x48.png"
-dest_files=[ "res://.import/Alex_move_48x48.png-01002537cc5cf76a830b980aa0203b36.stex" ]
+source_file="res://Floor/FloorTileset1.png"
+dest_files=[ "res://.import/FloorTileset1.png-e5a153dd4b40da53a390e7388cc5f6aa.stex" ]
 
 [params]
 

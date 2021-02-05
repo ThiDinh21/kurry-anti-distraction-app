@@ -11,18 +11,19 @@ enum {
 	SHOPPING,
 }
 
-var velocity = Vector2.ZERO
+var velocity = Vector2.DOWN
 var state = MOVE
 
 onready var idleSprite = $IdleSprite
 onready var moveSprite = $MoveSprite
+onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
 func _ready():
 	animationTree.active = true
 	change_sprite(idleSprite)
-	idleSprite.frame = 18
+	animationTree.set("parameters/Idle/blend_position", velocity)
 
 func _physics_process(delta):
 	match state:
