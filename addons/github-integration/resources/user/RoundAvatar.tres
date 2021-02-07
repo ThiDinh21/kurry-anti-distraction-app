@@ -14,6 +14,10 @@ code = "shader_type canvas_item;
 uniform sampler2D tex_frg_3;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d6caf543d5662667b476e0785561fd33e17c857e
 void vertex() {
 // Output:0
 
@@ -24,17 +28,27 @@ void fragment() {
 	vec3 n_out4p0;
 	float n_out4p1;
 	{
+<<<<<<< HEAD
 		vec4 _tex_read = texture( TEXTURE , UV.xy );
+=======
+		vec4 _tex_read = texture(TEXTURE , UV.xy);
+>>>>>>> d6caf543d5662667b476e0785561fd33e17c857e
 		n_out4p0 = _tex_read.rgb;
 		n_out4p1 = _tex_read.a;
 	}
 
 // Texture:3
+<<<<<<< HEAD
 	vec3 n_out3p0;
 	float n_out3p1;
 	vec4 tex_frg_3_read = texture( tex_frg_3 , UV.xy );
 	n_out3p0 = tex_frg_3_read.rgb;
 	n_out3p1 = tex_frg_3_read.a;
+=======
+	vec4 tex_frg_3_read = texture(tex_frg_3, UV.xy);
+	vec3 n_out3p0 = tex_frg_3_read.rgb;
+	float n_out3p1 = tex_frg_3_read.a;
+>>>>>>> d6caf543d5662667b476e0785561fd33e17c857e
 
 // Output:0
 	COLOR.rgb = n_out4p0;

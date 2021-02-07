@@ -43,7 +43,18 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 
 [node name="FirstFloor" type="Node2D"]
 
+<<<<<<< HEAD
 [node name="Floor" type="TileMap" parent="."]
+=======
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 476.758, 720.505 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+smoothing_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+>>>>>>> d6caf543d5662667b476e0785561fd33e17c857e
 position = Vector2( 6, 0 )
 z_index = -1
 tile_set = SubResource( 3 )
