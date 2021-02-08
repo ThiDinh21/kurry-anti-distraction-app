@@ -5,9 +5,9 @@
 [node name="AchievementButton" instance=ExtResource( 1 )]
 
 [node name="Label" parent="." index="0"]
-margin_left = 73.416
+margin_left = 70.7463
 margin_top = -2.66967
-margin_right = 73.416
+margin_right = 70.7463
 margin_bottom = 158.33
 text = "Achievement
 "

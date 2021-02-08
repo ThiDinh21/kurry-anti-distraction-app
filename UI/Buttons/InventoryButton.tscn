@@ -3,13 +3,8 @@
 [ext_resource path="res://UI/Buttons/MenuButton.tscn" type="PackedScene" id=1]
 
 [node name="InventoryButton" instance=ExtResource( 1 )]
-margin_left = 4.0
-margin_right = 405.0
-margin_bottom = 91.0
 
 [node name="Label" parent="." index="0"]
 margin_left = 100.113
-margin_top = -6.67419
 margin_right = 100.113
-margin_bottom = 154.325
 text = "Inventory"
