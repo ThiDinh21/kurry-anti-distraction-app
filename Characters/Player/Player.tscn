@@ -5,8 +5,8 @@
 [ext_resource path="res://Characters/Player/Alex_move_48x48.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 19.7051
-height = 14.9052
+radius = 12.0
+height = 6.0
 
 [sub_resource type="Animation" id=2]
 resource_name = "IdleDown"
@@ -208,27 +208,21 @@ start_node = "Idle"
 collision_layer = 2
 collision_mask = 3
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 MAX_SPEED = 250
 
 [node name="IdleSprite" type="Sprite" parent="."]
-scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 hframes = 24
-frame = 22
+frame = 20
 
 [node name="MoveSprite" type="Sprite" parent="."]
 visible = false
-scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 hframes = 24
 frame = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 6.80188, 70.7394 )
+position = Vector2( 0, 40 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
