@@ -3,7 +3,12 @@
 [ext_resource path="res://UI/Buttons/MenuButton.tscn" type="PackedScene" id=1]
 
 [node name="HomeButton" instance=ExtResource( 1 )]
+margin_bottom = 92.0
 
 [node name="Label" parent="." index="0"]
+margin_left = 146.832
+margin_top = 4.66968
+margin_right = 146.832
+margin_bottom = 165.669
 text = "Home
 "
