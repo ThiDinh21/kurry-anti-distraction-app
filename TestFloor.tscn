@@ -30,6 +30,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 2, 2 ),
 "one_way": false,
@@ -103,6 +108,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 4 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 3, 1 ),
 "one_way": false,
@@ -174,6 +184,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 1/autotile/z_index_map = [  ]
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 13 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 2, 0 ),
 "one_way": false,
@@ -226,13 +241,13 @@ tile_data = PoolIntArray( 589821, 0, 0, 589822, 0, 1, 589823, 0, 1, 524288, 0, 1
 position = Vector2( -44.0143, 357.626 )
 
 [node name="Mirror1" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 70.9996, 152 )
+position = Vector2( 35.3234, 184.109 )
 
 [node name="Shelf1" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 342.904, 292.096 )
+position = Vector2( 241.821, 256.42 )
 
 [node name="Shelf3" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 433.607, 431.685 )
+position = Vector2( 436.607, 431.685 )
 collision_mask = 3
 
 [node name="Shelf2" parent="YSort" instance=ExtResource( 5 )]
@@ -240,11 +255,11 @@ position = Vector2( 433.994, 291.979 )
 collision_mask = 3
 
 [node name="Shelf4" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 345.072, 431.998 )
+position = Vector2( 303.45, 443.89 )
 collision_mask = 3
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 135.894, 381.185 )
+position = Vector2( 191.759, 349.887 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 visible = false
