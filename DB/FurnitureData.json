@@ -1,0 +1,32 @@
+{
+	"10001": {
+		"Name": "Closet 1",
+		"Category": "Livingroom",
+		"Price": 50,
+		"Assets": "closet1.png"
+	},
+	"10002": {
+		"Name": "Mirror 1",
+		"Category": "Livingroom",
+		"Price": 20,
+		"Assets": "mirror1.png"
+	},
+	"10003": {
+		"Name": "Mirror 2",
+		"Category": "Livingroom",
+		"Price": 20,
+		"Assets": "mirror2.png"
+	},
+	"10004": {
+		"Name": "Shelf 1",
+		"Category": "Livingroom",
+		"Price": 75,
+		"Assets": "shelf1.png"
+	},
+	"10005": {
+		"Name": "Shelf 2",
+		"Category": "Livingroom",
+		"Price": 75,
+		"Assets": "shelf2.png"
+	}
+}

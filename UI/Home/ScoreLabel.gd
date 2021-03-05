@@ -6,7 +6,7 @@ var save_path = 'my_number'
 func _ready():
 	 pass 
 	
-func _process(delta):
+func _process(_delta):
 	text = str(num)
 
 func _save(content, path):
