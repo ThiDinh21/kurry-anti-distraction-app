@@ -8,11 +8,11 @@ func _process(delta):
 	$RichTextLabel/Control.position.x = -$HScrollBar.value
 
 func _buy(price):
-	if ScoreLabel.num >= price:
-		ScoreLabel.num -= price
+	if Global.game_state["currency"] >= price:
+		Global.game_state["currency"] -= price
 	else:
-		var rem = price - ScoreLabel.num
-		printt(rem)
+		var rem = price - Global.game_state["currency"]
+		print(rem)
 
 
 func _on_Button2_pressed():

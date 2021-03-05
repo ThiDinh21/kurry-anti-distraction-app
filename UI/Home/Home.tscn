@@ -59,7 +59,7 @@ margin_top = 179.407
 margin_right = 320.515
 margin_bottom = 448.407
 custom_fonts/font = ExtResource( 2 )
-text = "0
+text = "
 
 "
 script = ExtResource( 4 )
