@@ -3,10 +3,11 @@
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor/FloorTileset1.png" type="Texture" id=2]
 [ext_resource path="res://Characters/NPC/NPC.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Furniture/LivingRoom/Mirror1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Furniture/LivingRoom/Shelf1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Furniture/LivingRoom/Shelf3.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Furniture/LivingRoom/Shelf2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Furniture/Livingroom/Mirror1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Furniture/Livingroom/Shelf1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Furniture/Livingroom/Shelf3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Furniture/Livingroom/Shelf2.tscn" type="PackedScene" id=7]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
@@ -254,15 +255,6 @@ smoothing_enabled = true
 
 [node name="NPC" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 32.6176, 338.188 )
-
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 58.8075
-margin_top = 170.232
-margin_right = 98.8075
-margin_bottom = 210.232
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="input_event" from="YSort/Mirror1" to="YSort/Mirror1" method="_on_Furniture_input_event"]
 [connection signal="input_event" from="YSort/Shelf1" to="YSort/Shelf1" method="_on_Furniture_input_event"]
 [connection signal="input_event" from="YSort/Shelf3" to="YSort/Shelf3" method="_on_Furniture_input_event"]
