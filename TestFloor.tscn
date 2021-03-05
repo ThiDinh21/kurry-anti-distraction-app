@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor/FloorTileset1.png" type="Texture" id=2]
 [ext_resource path="res://Characters/NPC/NPC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TestFloor.gd" type="Script" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
@@ -26,6 +27,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 2, 2 ),
 "one_way": false,
@@ -99,6 +105,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 4 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 3, 1 ),
 "one_way": false,
@@ -170,6 +181,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 1/autotile/z_index_map = [  ]
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 13 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 2, 0 ),
 "one_way": false,
@@ -205,6 +221,7 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 
 [node name="FirstFloor" type="Node2D"]
 position = Vector2( 1, -359 )
+script = ExtResource( 4 )
 
 [node name="Floor" type="TileMap" parent="."]
 z_index = -1

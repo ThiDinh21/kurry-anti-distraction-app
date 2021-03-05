@@ -24,6 +24,11 @@ config/name="Kurry"
 run/main_scene="res://TestFloor.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://global.gd"
+ScoreLabel="*res://UI/Home/ScoreLabel.gd"
+
 [display]
 
 window/size/width=540

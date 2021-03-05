@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Characters/NPC/Bob/Bob.png" type="Texture" id=2]
+[ext_resource path="res://Characters/NPC/Chef Robe/Chef_Robe.png" type="Texture" id=3]
+[ext_resource path="res://Characters/NPC/Butcher/Butcher_2_idle_48x48.png" type="Texture" id=4]
+[ext_resource path="res://Characters/NPC/Conference Man/Conference_man_idle_48x48.png" type="Texture" id=5]
+[ext_resource path="res://UI/Shop/Label.gd" type="Script" id=6]
+[ext_resource path="res://UI/Shop/Shop.gd" type="Script" id=7]
+[ext_resource path="res://UI/Shop/Characters.gd" type="Script" id=8]
+[ext_resource path="res://Fonts/Silver_60.tres" type="DynamicFont" id=9]
 
-[sub_resource type="Theme" id=1]
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.737255, 0.156863, 0.156863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.294118, 0.670588, 0.121569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="Theme" id=4]
 TabContainer/colors/font_color_bg = Color( 0.69, 0.69, 0.69, 1 )
 TabContainer/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 TabContainer/colors/font_color_fg = Color( 0.94, 0.94, 0.94, 1 )
@@ -18,16 +34,73 @@ TabContainer/icons/increment = null
 TabContainer/icons/increment_highlight = null
 TabContainer/icons/menu = null
 TabContainer/icons/menu_highlight = null
-TabContainer/styles/panel = null
-TabContainer/styles/tab_bg = null
+TabContainer/styles/panel = SubResource( 1 )
+TabContainer/styles/tab_bg = SubResource( 2 )
 TabContainer/styles/tab_disabled = null
-TabContainer/styles/tab_fg = null
+TabContainer/styles/tab_fg = SubResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.368627, 0.235294, 0.0313726, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.309804, 0.698039, 0.0745098, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.764706, 0.807843, 0.133333, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+
+[sub_resource type="Theme" id=8]
+TabContainer/colors/font_color_bg = Color( 0.69, 0.69, 0.69, 1 )
+TabContainer/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+TabContainer/colors/font_color_fg = Color( 0.94, 0.94, 0.94, 1 )
+TabContainer/constants/hseparation = 4
+TabContainer/constants/label_valign_bg = 2
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 8
+TabContainer/constants/top_margin = 24
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_highlight = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_highlight = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_highlight = null
+TabContainer/styles/panel = SubResource( 5 )
+TabContainer/styles/tab_bg = SubResource( 6 )
+TabContainer/styles/tab_disabled = null
+TabContainer/styles/tab_fg = SubResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+
+[sub_resource type="GDScript" id=10]
+script/source = "extends Control
+
+func _on_BackButton_pressed():
+	get_tree().change_scene(\"res://UI/Menu.tscn\")
+"
 
 [node name="Shop" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = SubResource( 4 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -35,6 +108,8 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -4.49487
+margin_right = -4.49487
 color = Color( 0.113725, 0.709804, 0.709804, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -52,26 +127,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Cash" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 101.0
 margin_bottom = -2.0
-theme = SubResource( 1 )
-custom_styles/tab_fg = SubResource( 2 )
+theme = SubResource( 8 )
+custom_styles/tab_fg = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tabs" type="Tabs" parent="TabContainer"]
+[node name="Characters" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 10.0
+margin_top = 34.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 8 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Tabs"]
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Characters"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 14.0
@@ -81,3 +164,241 @@ margin_bottom = -19.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control" type="Node2D" parent="TabContainer/Characters/RichTextLabel"]
+
+[node name="Panel1" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
+margin_right = 228.0
+margin_bottom = 374.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bob" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel1"]
+position = Vector2( 111.964, 163.317 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel1"]
+anchor_left = 0.434
+anchor_top = 0.681
+anchor_right = 0.434
+anchor_bottom = 0.681
+margin_left = -86.5344
+margin_top = 33.6061
+margin_right = 118.466
+margin_bottom = 76.6061
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
+margin_left = 260.705
+margin_top = -2.99664
+margin_right = 488.705
+margin_bottom = 371.003
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chef Robe" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel2"]
+position = Vector2( 115.852, 158.021 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel2"]
+anchor_left = 0.434
+anchor_top = 0.681
+anchor_right = 0.434
+anchor_bottom = 0.681
+margin_left = -83.5378
+margin_top = 38.1011
+margin_right = 121.462
+margin_bottom = 81.1011
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = 30.0
+margin_right = 20.0
+margin_bottom = 44.0
+text = "price:
+"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 10
+
+[node name="Panel3" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
+margin_left = 1.49829
+margin_top = 419.526
+margin_right = 229.498
+margin_bottom = 793.526
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Butcher" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel3"]
+position = Vector2( 117.288, 166.307 )
+texture = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel3"]
+anchor_left = 0.434
+anchor_top = 0.681
+anchor_right = 0.434
+anchor_bottom = 0.681
+margin_left = -86.5343
+margin_top = 36.6027
+margin_right = 118.466
+margin_bottom = 79.6027
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel3"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -21.0
+margin_top = 28.0
+margin_right = 19.0
+margin_bottom = 42.0
+text = "price:"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 20
+
+[node name="Panel4" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
+margin_left = 259.207
+margin_top = 421.024
+margin_right = 487.207
+margin_bottom = 795.024
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichMan" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel4"]
+position = Vector2( 117.598, 171.978 )
+texture = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel4"]
+anchor_left = 0.434
+anchor_top = 0.681
+anchor_right = 0.434
+anchor_bottom = 0.681
+margin_left = -86.5343
+margin_top = 33.6061
+margin_right = 118.466
+margin_bottom = 76.6061
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel4"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = 41.0
+margin_right = 20.0
+margin_bottom = 55.0
+text = "price:"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel5" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
+margin_left = 526.084
+margin_top = 6.02213
+margin_right = 754.084
+margin_bottom = 380.022
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bob" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel5"]
+position = Vector2( 112.964, 217.317 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel5"]
+anchor_left = 0.434
+anchor_top = 0.681
+anchor_right = 0.434
+anchor_bottom = 0.681
+margin_left = -86.5344
+margin_top = 33.6061
+margin_right = 118.466
+margin_bottom = 76.6061
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel5"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = 21.0
+margin_right = 20.0
+margin_bottom = 35.0
+text = "price:"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HScrollBar" type="HScrollBar" parent="TabContainer/Characters"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -12.0
+max_value = 500.0
+page = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Furniture" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 34.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Furniture"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 16.0
+margin_right = -14.0
+margin_bottom = -19.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 195.0
+margin_top = 960.0
+margin_right = 347.0
+margin_bottom = 1033.0
+custom_fonts/font = ExtResource( 9 )
+text = "Back"
+script = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel2/Button" to="TabContainer/Characters" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel3/Button" to="TabContainer/Characters" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel4/Button" to="TabContainer/Characters" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel5/Button" to="TabContainer/Characters" method="_on_Button5_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
