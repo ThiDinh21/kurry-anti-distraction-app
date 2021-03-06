@@ -7,8 +7,9 @@
 [ext_resource path="res://UI/Buttons/ShopButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI/Buttons/HomeButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Fonts/Silver.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://UI/fade_in/FadeIn.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/TransitionEffects/FadeIn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/Menu.gd" type="Script" id=9]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 33
