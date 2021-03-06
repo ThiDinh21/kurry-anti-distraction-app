@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button.png-35bb987518cc2f96cb6b0cd90a374dd1.stex"
+path="res://.import/Conference_man_idle_48x48.png-3526849828e263edf179582eb9070973.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/button.png"
-dest_files=[ "res://.import/button.png-35bb987518cc2f96cb6b0cd90a374dd1.stex" ]
+source_file="res://Characters/NPC/Conference Man/Conference_man_idle_48x48.png"
+dest_files=[ "res://.import/Conference_man_idle_48x48.png-3526849828e263edf179582eb9070973.stex" ]
 
 [params]
 

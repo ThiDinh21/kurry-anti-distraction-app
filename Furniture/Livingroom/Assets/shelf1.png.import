@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shelf3.png-fc9ba71bb46531b22df6d360176eb006.stex"
+path="res://.import/shelf1.png-f4cb85bdd640764fec46b36eec5e795a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Furniture/LivingRoom/Assets/shelf3.png"
-dest_files=[ "res://.import/shelf3.png-fc9ba71bb46531b22df6d360176eb006.stex" ]
+source_file="res://Furniture/Livingroom/Assets/shelf1.png"
+dest_files=[ "res://.import/shelf1.png-f4cb85bdd640764fec46b36eec5e795a.stex" ]
 
 [params]
 
