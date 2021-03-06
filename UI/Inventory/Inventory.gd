@@ -12,7 +12,7 @@ func _ready():
 		if furn_id != null:
 			var icon_texture = load("res://Furniture/" + get_asset_path_from_id(furn_id))
 			new_inv_slot.get_node("Icon").set_texture(icon_texture)
-		gridContainer.add_child(new_inv_slot)
+		gridContainer.add_child(new_inv_slot, true)
 
 func get_asset_path_from_id(id):
 	var category = FurnitureData.furniture_data[id]["Category"]
