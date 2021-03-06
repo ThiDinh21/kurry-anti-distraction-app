@@ -1,0 +1,155 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/Silver_80.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/Buttons/ToHomeButton.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Silver.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://UI/Setting/Setting.gd" type="Script" id=5]
+[ext_resource path="res://UI/Cianwood-City.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 4 )
+
+[node name="SettingMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -270.0
+margin_top = -540.0
+margin_right = 282.0
+margin_bottom = 538.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.497
+anchor_top = 0.5
+anchor_right = 0.497
+anchor_bottom = 0.5
+margin_left = -206.38
+margin_top = -498.0
+margin_right = 198.62
+margin_bottom = -365.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+text = "Setting"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 80.0
+margin_top = 920.0
+margin_right = 454.0
+margin_bottom = 1015.0
+custom_fonts/font = ExtResource( 1 )
+text = "Back"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Audio" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Master" type="Label" parent="Audio"]
+margin_left = 36.0
+margin_top = 168.0
+margin_right = 228.0
+margin_bottom = 280.0
+custom_fonts/font = SubResource( 1 )
+text = "Master"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SliderMaster" type="HSlider" parent="Audio/Master"]
+margin_left = 28.0
+margin_top = 112.0
+margin_right = 236.0
+margin_bottom = 131.0
+rect_scale = Vector2( 2, 3 )
+min_value = -50.0
+max_value = 10.0
+step = 10.0
+value = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Label" parent="Audio"]
+margin_left = 22.0
+margin_top = 424.0
+margin_right = 214.0
+margin_bottom = 536.0
+custom_fonts/font = SubResource( 1 )
+text = "Music"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SliderMusic" type="HSlider" parent="Audio/Music"]
+margin_left = 42.0
+margin_top = 112.0
+margin_right = 250.0
+margin_bottom = 131.0
+rect_scale = Vector2( 2, 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="Label" parent="Audio"]
+margin_left = 24.0
+margin_top = 680.0
+margin_right = 216.0
+margin_bottom = 792.0
+custom_fonts/font = SubResource( 1 )
+text = "Sound"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SliderSound" type="HSlider" parent="Audio/Sound"]
+margin_left = 40.0
+margin_top = 112.0
+margin_right = 244.0
+margin_bottom = 131.0
+rect_scale = Vector2( 2, 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+[connection signal="pressed" from="Back" to="Back" method="_on_Back_pressed"]
+[connection signal="value_changed" from="Audio/Master/SliderMaster" to="." method="_on_SliderMaster_value_changed"]
+[connection signal="value_changed" from="Audio/Music/SliderMusic" to="." method="_on_SliderMusic_value_changed"]
+[connection signal="value_changed" from="Audio/Sound/SliderSound" to="." method="_on_SliderSound_value_changed"]
