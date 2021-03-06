@@ -34,11 +34,7 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-<<<<<<< HEAD
-0/shape = SubResource( 1 )
-=======
 0/shape = SubResource( 2 )
->>>>>>> 61d75518000cbe294ca8b56e283e2c197f97a8f0
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
@@ -116,11 +112,7 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-<<<<<<< HEAD
-0/shape = SubResource( 4 )
-=======
 0/shape = SubResource( 5 )
->>>>>>> 61d75518000cbe294ca8b56e283e2c197f97a8f0
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
@@ -196,11 +188,7 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-<<<<<<< HEAD
-1/shape = SubResource( 13 )
-=======
 1/shape = SubResource( 14 )
->>>>>>> 61d75518000cbe294ca8b56e283e2c197f97a8f0
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
@@ -254,34 +242,9 @@ format = 1
 tile_data = PoolIntArray( 589821, 0, 0, 589822, 0, 1, 589823, 0, 1, 524288, 0, 1, 524289, 0, 1, 524290, 0, 1, 524291, 0, 1, 524292, 0, 1, 524293, 0, 1, 524294, 0, 1, 524295, 0, 1, 524296, 0, 1, 524297, 0, 1, 524298, 0, 3, 655357, 0, 65536, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65539, 720893, 0, 65536, 655370, 0, 65539, 786429, 0, 65536, 720906, 0, 65539, 851965, 0, 65536, 786442, 0, 65539, 917501, 0, 65536, 851978, 0, 65539, 983037, 0, 65536, 917514, 0, 65539, 1048573, 0, 65536, 983050, 0, 65539, 1114109, 0, 65536, 1048586, 0, 65539, 1179645, 0, 65536, 1114122, 0, 65539, 1245181, 0, 65536, 1179658, 0, 65539, 1310717, 1, 0, 1310718, 1, 1, 1310719, 1, 1, 1245184, 1, 1, 1245185, 1, 1, 1245186, 1, 1, 1245187, 1, 1, 1245188, 1, 1, 1245189, 1, 1, 1245190, 1, 1, 1245191, 1, 1, 1245192, 1, 1, 1245193, 1, 1, 1245194, 1, 3 )
 
 [node name="YSort" type="YSort" parent="."]
-<<<<<<< HEAD
-position = Vector2( -44.0143, 357.626 )
-
-[node name="Mirror1" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 35.3234, 184.109 )
-
-[node name="Shelf1" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 241.821, 256.42 )
-
-[node name="Shelf3" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 436.607, 431.685 )
-collision_mask = 3
-
-[node name="Shelf2" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 433.994, 291.979 )
-collision_mask = 3
-
-[node name="Shelf4" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 303.45, 443.89 )
-collision_mask = 3
-
-[node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 191.759, 349.887 )
-=======
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 193.789, 648.554 )
->>>>>>> 61d75518000cbe294ca8b56e283e2c197f97a8f0
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 visible = false
