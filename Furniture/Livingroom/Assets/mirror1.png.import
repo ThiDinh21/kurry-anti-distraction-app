@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mirror1.png-11b0ff3c969544f56b64b396f09f9258.stex"
+path="res://.import/mirror1.png-ff7f9bfe2d36c513accba63685afddfc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Furniture/Livingroom/Assets/mirror1.png"
-dest_files=[ "res://.import/mirror1.png-11b0ff3c969544f56b64b396f09f9258.stex" ]
+source_file="res://Furniture/LivingRoom/Assets/mirror1.png"
+dest_files=[ "res://.import/mirror1.png-ff7f9bfe2d36c513accba63685afddfc.stex" ]
 
 [params]
 
