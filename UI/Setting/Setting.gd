@@ -15,7 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
 func _on_SliderMaster_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"),value)
 
