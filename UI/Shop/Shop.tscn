@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Characters/Player/NPC/Bob/Bob.png" type="Texture" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://UI/Shop/Shop.gd" type="Script" id=7]
 [ext_resource path="res://UI/Shop/Characters.gd" type="Script" id=8]
 [ext_resource path="res://Fonts/Silver_60.tres" type="DynamicFont" id=9]
+[ext_resource path="res://UI/Shop/ShopPanel/ShopPanel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Fonts/Silver.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Fonts/Silver_80.tres" type="DynamicFont" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.737255, 0.156863, 0.156863, 1 )
@@ -38,6 +41,10 @@ TabContainer/styles/panel = SubResource( 1 )
 TabContainer/styles/tab_bg = SubResource( 2 )
 TabContainer/styles/tab_disabled = null
 TabContainer/styles/tab_fg = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 45
+font_data = ExtResource( 11 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.368627, 0.235294, 0.0313726, 1 )
@@ -130,6 +137,8 @@ __meta__ = {
 [node name="Cash" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 1, 0.47451, 0.054902, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -157,46 +166,17 @@ script = ExtResource( 8 )
 [node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Characters"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 14.0
-margin_top = 14.8108
-margin_right = -14.0
-margin_bottom = -20.1892
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Control" type="Node2D" parent="TabContainer/Characters/RichTextLabel"]
-
-[node name="Panel1" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-margin_right = 228.0
-margin_bottom = 374.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Bob" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel1"]
-position = Vector2( 111.964, 163.317 )
-texture = ExtResource( 2 )
-
-[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel1"]
-anchor_left = 0.434
-anchor_top = 0.681
-anchor_right = 0.434
-anchor_bottom = 0.681
-margin_left = -86.5344
-margin_top = 33.6061
-margin_right = 118.466
-margin_bottom = 76.6061
-text = "Buy"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+visible = false
 
 [node name="Panel2" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-margin_left = 260.705
-margin_top = -2.99664
-margin_right = 488.705
-margin_bottom = 371.003
+visible = false
+margin_top = 4.0
+margin_bottom = 4.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -235,10 +215,9 @@ __meta__ = {
 price = 10
 
 [node name="Panel3" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-margin_left = 1.49829
-margin_top = 419.526
-margin_right = 229.498
-margin_bottom = 793.526
+visible = false
+margin_top = 8.0
+margin_bottom = 8.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -264,10 +243,10 @@ __meta__ = {
 [node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel3"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -21.0
-margin_top = 28.0
-margin_right = 19.0
-margin_bottom = 42.0
+margin_left = -25.4949
+margin_top = 44.4814
+margin_right = 14.5051
+margin_bottom = 58.4814
 text = "price:"
 script = ExtResource( 6 )
 __meta__ = {
@@ -276,10 +255,9 @@ __meta__ = {
 price = 20
 
 [node name="Panel4" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-margin_left = 259.207
-margin_top = 421.024
-margin_right = 487.207
-margin_bottom = 795.024
+visible = false
+margin_top = 12.0
+margin_bottom = 12.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -314,12 +292,12 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+price = 30
 
 [node name="Panel5" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-margin_left = 526.084
-margin_top = 6.02213
-margin_right = 754.084
-margin_bottom = 380.022
+visible = false
+margin_top = 16.0
+margin_bottom = 16.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -355,7 +333,95 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Characters/RichTextLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.4543
+margin_top = 17.0
+margin_right = 13.4543
+margin_bottom = -3.68176
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Characters/RichTextLabel/ScrollContainer"]
+margin_right = 490.0
+margin_bottom = 1145.0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 30
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel1" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+
+[node name="Texture" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel1" index="0"]
+texture = ExtResource( 2 )
+
+[node name="PriceLabel" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel1" index="2"]
+margin_left = 98.2132
+margin_top = 231.609
+margin_right = 172.213
+margin_bottom = 282.609
+
+[node name="NameLabel" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel1" index="3"]
+margin_left = 79.0
+margin_top = 36.0
+margin_right = 157.0
+margin_bottom = 125.0
+custom_fonts/font = ExtResource( 12 )
+text = "Bob"
+
+[node name="Panel2" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+margin_left = 260.0
+margin_right = 490.0
+
+[node name="Texture" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel2" index="0"]
+texture = ExtResource( 4 )
+
+[node name="PriceLabel" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel2" index="2"]
+margin_left = 101.684
+margin_top = 233.402
+margin_right = 175.684
+margin_bottom = 284.402
+
+[node name="NameLabel" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel2" index="3"]
+margin_left = 54.5911
+margin_top = 38.6818
+margin_right = 187.591
+margin_bottom = 105.682
+text = "Butcher"
+
+[node name="Panel3" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+margin_top = 385.0
+margin_bottom = 760.0
+
+[node name="Texture" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel3" index="0"]
+texture = ExtResource( 3 )
+
+[node name="Panel4" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+margin_left = 260.0
+margin_top = 385.0
+margin_right = 490.0
+margin_bottom = 760.0
+
+[node name="Texture" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel4" index="0"]
+texture = ExtResource( 5 )
+
+[node name="ShopPanel6" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+margin_top = 770.0
+margin_bottom = 1145.0
+
+[node name="ShopPanel7" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+margin_left = 260.0
+margin_top = 770.0
+margin_right = 490.0
+margin_bottom = 1145.0
+
 [node name="HScrollBar" type="HScrollBar" parent="TabContainer/Characters"]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -365,6 +431,31 @@ page = 30.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/Characters"]
+visible = false
+margin_left = 61.205
+margin_top = 302.811
+margin_right = 480.205
+margin_bottom = 484.811
+color = Color( 0, 0, 0, 0.741176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Characters/ColorRect"]
+margin_left = 187.516
+margin_top = 2.22021
+margin_right = 359.516
+margin_bottom = 69.2202
+custom_fonts/font = ExtResource( 9 )
+text = "Hi"
+
+[node name="Button" type="Button" parent="TabContainer/Characters/ColorRect"]
+margin_left = 145.0
+margin_top = 104.0
+margin_right = 272.0
+margin_bottom = 135.0
 
 [node name="Furniture" type="Tabs" parent="TabContainer"]
 visible = false
@@ -388,9 +479,9 @@ __meta__ = {
 
 [node name="BackButton" type="Button" parent="."]
 margin_left = 195.0
-margin_top = 960.0
+margin_top = 948.661
 margin_right = 347.0
-margin_bottom = 1033.0
+margin_bottom = 1021.66
 custom_fonts/font = ExtResource( 9 )
 text = "Back"
 script = SubResource( 10 )
@@ -402,3 +493,11 @@ __meta__ = {
 [connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel4/Button" to="TabContainer/Characters" method="_on_Button4_pressed"]
 [connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel5/Button" to="TabContainer/Characters" method="_on_Button5_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+
+[editable path="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel1"]
+
+[editable path="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel2"]
+
+[editable path="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel3"]
+
+[editable path="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel4"]
