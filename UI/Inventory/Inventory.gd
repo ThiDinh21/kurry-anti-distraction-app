@@ -6,9 +6,10 @@ var invSlot = preload("res://UI/Inventory/InventorySlot.tscn")
 onready var gridContainer = $MContainer/VBox/ScrollContainer/GridContainer
 
 func _ready():
-	for i in InventoryData.inventory_data.keys():
+	for key in InventoryData.inventory_data.keys():
 		var new_inv_slot = invSlot.instance()
-		var furn_id = InventoryData.inventory_data[i]["Item"]
+		new_inv_slot.name = key
+		var furn_id = InventoryData.inventory_data[key]["Item"]
 		if furn_id != null:
 			var icon_texture = load("res://Furniture/" + get_asset_path_from_id(furn_id))
 			new_inv_slot.get_node("Icon").set_texture(icon_texture)
