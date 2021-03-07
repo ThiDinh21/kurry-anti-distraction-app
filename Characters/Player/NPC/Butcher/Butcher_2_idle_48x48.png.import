@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Adam_phone_48x48.png-4ea7064252f22d4c50aff9e204df9def.stex"
+path="res://.import/Butcher_2_idle_48x48.png-662605c6c2e5f40a6ce4988a9e6af09d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/NPC/Adam/Adam_phone_48x48.png"
-dest_files=[ "res://.import/Adam_phone_48x48.png-4ea7064252f22d4c50aff9e204df9def.stex" ]
+source_file="res://Characters/Player/NPC/Butcher/Butcher_2_idle_48x48.png"
+dest_files=[ "res://.import/Butcher_2_idle_48x48.png-662605c6c2e5f40a6ce4988a9e6af09d.stex" ]
 
 [params]
 
