@@ -43,6 +43,8 @@ func drop_data(_position, data):
 	# Update textures
 	data["origin_slot"].texture = data["target_texture"]
 	texture = data["origin_texture"]
+	
+	InventoryData.save_data()
 
 
 

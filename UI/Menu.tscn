@@ -10,7 +10,6 @@
 [ext_resource path="res://UI/TransitionEffects/FadeIn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/Menu.gd" type="Script" id=9]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 33
 font_data = ExtResource( 7 )

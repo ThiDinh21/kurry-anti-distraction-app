@@ -22,3 +22,9 @@ text = "Achievement"
 
 [node name="BackButton2" parent="CenterContainer/VBoxContainer" index="1"]
 margin_right = 405.0
+
+[node name="Button" parent="." index="1"]
+visible = false
+
+[node name="Label" parent="." index="2"]
+visible = false

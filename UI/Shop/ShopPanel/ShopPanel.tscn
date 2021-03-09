@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Shop/ShopPanel/PurchaseButton.gd" type="Script" id=1]
+[ext_resource path="res://UI/Shop/ShopPanel/PriceLabel.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Silver_60.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Silver_30.tres" type="DynamicFont" id=4]
+
+[node name="ShopPanel" type="Panel"]
+margin_right = 230.0
+margin_bottom = 375.0
+rect_min_size = Vector2( 230, 375 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texture" type="Sprite" parent="."]
+position = Vector2( 111.964, 163.317 )
+
+[node name="PurchaseButton" type="Button" parent="."]
+anchor_left = 0.434
+anchor_top = 0.681
+anchor_right = 0.434
+anchor_bottom = 0.681
+margin_left = -86.5344
+margin_top = 46.6061
+margin_right = 118.466
+margin_bottom = 89.6061
+text = "Buy"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PriceLabel" type="Label" parent="."]
+margin_left = 101.409
+margin_top = 231.565
+margin_right = 175.409
+margin_bottom = 282.565
+custom_fonts/font = ExtResource( 4 )
+text = "price:"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 20
+
+[node name="NameLabel" type="Label" parent="."]
+margin_left = 84.5911
+margin_top = 40.6818
+margin_right = 141.591
+margin_bottom = 67.6818
+custom_fonts/font = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PurchaseButton" to="PurchaseButton" method="_on_PurchaseButton_pressed"]
