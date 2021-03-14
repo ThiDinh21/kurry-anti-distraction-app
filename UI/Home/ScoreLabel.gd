@@ -6,7 +6,7 @@ func _process(_delta):
 	text = str(Global.game_state["currency"])
 
 func _on_Button_pressed():
-	Global.game_state["currency"] += 10
+	Global.game_state["currency"] += 40
 	Global.save_game()
 	
 

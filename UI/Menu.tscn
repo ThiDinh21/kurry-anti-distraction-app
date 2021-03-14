@@ -28,7 +28,7 @@ __meta__ = {
 margin_left = 79.0
 margin_top = 172.0
 margin_right = 472.0
-margin_bottom = 1010.0
+margin_bottom = 1046.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -42,12 +42,12 @@ stretch_mode = 4
 [node name="CenterRow" type="HBoxContainer" parent="MenuBox"]
 margin_top = 229.0
 margin_right = 393.0
-margin_bottom = 639.0
+margin_bottom = 729.0
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="MenuBox/CenterRow"]
 margin_right = 393.0
-margin_bottom = 410.0
+margin_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 20
@@ -82,10 +82,22 @@ margin_right = 393.0
 margin_bottom = 410.0
 scene_to_load = "res://UI/Settings/Settings.tscn"
 
+[node name="BackButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 6 )]
+margin_top = 430.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 360, 70 )
+scene_to_load = "res://UI/Home/Home.tscn"
+
+[node name="Label" parent="MenuBox/CenterRow/Buttons/BackButton" index="0"]
+margin_top = -2.88983
+margin_bottom = 158.109
+text = "Back
+"
+
 [node name="VersionLabel" type="Label" parent="MenuBox"]
-margin_top = 643.0
+margin_top = 733.0
 margin_right = 393.0
-margin_bottom = 838.0
+margin_bottom = 874.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 text = "Version 0.0.1
@@ -95,4 +107,7 @@ valign = 1
 
 [node name="FadeIn" parent="." instance=ExtResource( 8 )]
 visible = false
+[connection signal="pressed" from="MenuBox/CenterRow/Buttons/BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+
+[editable path="MenuBox/CenterRow/Buttons/BackButton"]
