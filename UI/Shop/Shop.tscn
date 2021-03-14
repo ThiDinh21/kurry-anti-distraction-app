@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Characters/NPC/Bob/Bob.png" type="Texture" id=2]
@@ -115,8 +115,8 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -4.49487
-margin_right = -4.49487
+margin_left = -5.75482
+margin_right = -5.75482
 color = Color( 0.113725, 0.709804, 0.709804, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -170,169 +170,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Node2D" parent="TabContainer/Characters/RichTextLabel"]
-visible = false
-
-[node name="Panel2" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-visible = false
-margin_top = 4.0
-margin_bottom = 4.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Chef Robe" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel2"]
-position = Vector2( 115.852, 158.021 )
-texture = ExtResource( 3 )
-
-[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel2"]
-anchor_left = 0.434
-anchor_top = 0.681
-anchor_right = 0.434
-anchor_bottom = 0.681
-margin_left = -83.5378
-margin_top = 38.1011
-margin_right = 121.462
-margin_bottom = 81.1011
-text = "Buy"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel2"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -20.0
-margin_top = 30.0
-margin_right = 20.0
-margin_bottom = 44.0
-text = "price:
-"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-price = 10
-
-[node name="Panel3" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-visible = false
-margin_top = 8.0
-margin_bottom = 8.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Butcher" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel3"]
-position = Vector2( 117.288, 166.307 )
-texture = ExtResource( 4 )
-
-[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel3"]
-anchor_left = 0.434
-anchor_top = 0.681
-anchor_right = 0.434
-anchor_bottom = 0.681
-margin_left = -86.5343
-margin_top = 36.6027
-margin_right = 118.466
-margin_bottom = 79.6027
-text = "Buy"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel3"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -25.4949
-margin_top = 44.4814
-margin_right = 14.5051
-margin_bottom = 58.4814
-text = "price:"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-price = 20
-
-[node name="Panel4" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-visible = false
-margin_top = 12.0
-margin_bottom = 12.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichMan" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel4"]
-position = Vector2( 117.598, 171.978 )
-texture = ExtResource( 5 )
-
-[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel4"]
-anchor_left = 0.434
-anchor_top = 0.681
-anchor_right = 0.434
-anchor_bottom = 0.681
-margin_left = -86.5343
-margin_top = 33.6061
-margin_right = 118.466
-margin_bottom = 76.6061
-text = "Buy"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel4"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -20.0
-margin_top = 41.0
-margin_right = 20.0
-margin_bottom = 55.0
-text = "price:"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-price = 30
-
-[node name="Panel5" type="Panel" parent="TabContainer/Characters/RichTextLabel/Control"]
-visible = false
-margin_top = 16.0
-margin_bottom = 16.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Bob" type="Sprite" parent="TabContainer/Characters/RichTextLabel/Control/Panel5"]
-position = Vector2( 112.964, 217.317 )
-texture = ExtResource( 2 )
-
-[node name="Button" type="Button" parent="TabContainer/Characters/RichTextLabel/Control/Panel5"]
-anchor_left = 0.434
-anchor_top = 0.681
-anchor_right = 0.434
-anchor_bottom = 0.681
-margin_left = -86.5344
-margin_top = 33.6061
-margin_right = 118.466
-margin_bottom = 76.6061
-text = "Buy"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="TabContainer/Characters/RichTextLabel/Control/Panel5"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -20.0
-margin_top = 21.0
-margin_right = 20.0
-margin_bottom = 35.0
-text = "price:"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Characters/RichTextLabel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -365,6 +202,7 @@ margin_left = 98.2132
 margin_top = 231.609
 margin_right = 172.213
 margin_bottom = 282.609
+price = 10
 
 [node name="NameLabel" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel1" index="3"]
 margin_left = 79.0
@@ -401,6 +239,9 @@ margin_bottom = 760.0
 [node name="Texture" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel3" index="0"]
 texture = ExtResource( 3 )
 
+[node name="PriceLabel" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel3" index="2"]
+price = 30
+
 [node name="Panel4" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_left = 260.0
 margin_top = 385.0
@@ -409,6 +250,9 @@ margin_bottom = 760.0
 
 [node name="Texture" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel4" index="0"]
 texture = ExtResource( 5 )
+
+[node name="PriceLabel" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel4" index="2"]
+price = 40
 
 [node name="ShopPanel6" parent="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_top = 770.0
@@ -419,43 +263,6 @@ margin_left = 260.0
 margin_top = 770.0
 margin_right = 490.0
 margin_bottom = 1145.0
-
-[node name="HScrollBar" type="HScrollBar" parent="TabContainer/Characters"]
-visible = false
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -12.0
-max_value = 500.0
-page = 30.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="TabContainer/Characters"]
-visible = false
-margin_left = 61.205
-margin_top = 302.811
-margin_right = 480.205
-margin_bottom = 484.811
-color = Color( 0, 0, 0, 0.741176 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="TabContainer/Characters/ColorRect"]
-margin_left = 187.516
-margin_top = 2.22021
-margin_right = 359.516
-margin_bottom = 69.2202
-custom_fonts/font = ExtResource( 9 )
-text = "Hi"
-
-[node name="Button" type="Button" parent="TabContainer/Characters/ColorRect"]
-margin_left = 145.0
-margin_top = 104.0
-margin_right = 272.0
-margin_bottom = 135.0
 
 [node name="Furniture" type="Tabs" parent="TabContainer"]
 visible = false
@@ -488,10 +295,6 @@ script = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel2/Button" to="TabContainer/Characters" method="_on_Button2_pressed"]
-[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel3/Button" to="TabContainer/Characters" method="_on_Button3_pressed"]
-[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel4/Button" to="TabContainer/Characters" method="_on_Button4_pressed"]
-[connection signal="pressed" from="TabContainer/Characters/RichTextLabel/Control/Panel5/Button" to="TabContainer/Characters" method="_on_Button5_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 
 [editable path="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/Panel1"]
