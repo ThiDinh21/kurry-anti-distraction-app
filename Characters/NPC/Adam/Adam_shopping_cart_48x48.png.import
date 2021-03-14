@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bob.png-e9f3e66112b7d9c6dc6cd90f00c7a7a7.stex"
+path="res://.import/Adam_shopping_cart_48x48.png-545c3c95225d92e686d2015cd383c9f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Player/NPC/Bob/Bob.png"
-dest_files=[ "res://.import/Bob.png-e9f3e66112b7d9c6dc6cd90f00c7a7a7.stex" ]
+source_file="res://Characters/NPC/Adam/Adam_shopping_cart_48x48.png"
+dest_files=[ "res://.import/Adam_shopping_cart_48x48.png-545c3c95225d92e686d2015cd383c9f1.stex" ]
 
 [params]
 

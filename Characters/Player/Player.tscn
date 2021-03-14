@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Characters/Player/Alex_idle_anim_48x48.png" type="Texture" id=1]
 [ext_resource path="res://Characters/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Characters/Player/Alex_move_48x48.png" type="Texture" id=3]
+[ext_resource path="res://Characters/Player/Alex_sit1_48x48.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0
@@ -140,6 +141,40 @@ tracks/0/keys = {
 "values": [ 6, 7, 8, 9, 10, 11 ]
 }
 
+[sub_resource type="Animation" id=25]
+resource_name = "Sit1Left"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sit1Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Sit1Right"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sit1Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
 [sub_resource type="AnimationNodeAnimation" id=10]
 animation = "IdleLeft"
 
@@ -190,17 +225,47 @@ min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "Sit1Left"
+
+[sub_resource type="AnimationNodeAnimation" id=34]
+animation = "Sit1Left"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "Sit1Right"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "Sit1Right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=30]
+blend_point_0/node = SubResource( 33 )
+blend_point_0/pos = Vector2( -1, 1 )
+blend_point_1/node = SubResource( 34 )
+blend_point_1/pos = Vector2( -1, -1 )
+blend_point_2/node = SubResource( 35 )
+blend_point_2/pos = Vector2( 1, 1 )
+blend_point_3/node = SubResource( 36 )
+blend_point_3/pos = Vector2( 1, -1 )
+blend_mode = 1
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=20]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
 
 [sub_resource type="AnimationNodeStateMachine" id=22]
 states/Idle/node = SubResource( 14 )
 states/Idle/position = Vector2( 120, 104 )
 states/Move/node = SubResource( 19 )
 states/Move/position = Vector2( 307, 104 )
-transitions = [ "Idle", "Move", SubResource( 20 ), "Move", "Idle", SubResource( 21 ) ]
+states/Sit1/node = SubResource( 30 )
+states/Sit1/position = Vector2( 120, -12 )
+transitions = [ "Idle", "Move", SubResource( 20 ), "Move", "Idle", SubResource( 21 ), "Sit1", "Idle", SubResource( 31 ), "Idle", "Sit1", SubResource( 32 ) ]
 start_node = "Idle"
+graph_offset = Vector2( -174, -51 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=23]
 
@@ -209,15 +274,21 @@ script = ExtResource( 2 )
 MAX_SPEED = 250
 
 [node name="IdleSprite" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 1 )
 hframes = 24
-frame = 20
+frame = 21
 
 [node name="MoveSprite" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
 hframes = 24
-frame = 6
+frame = 10
+
+[node name="Sit1Sprite" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+hframes = 12
+frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 40 )
@@ -233,10 +304,14 @@ anims/MoveDown = SubResource( 6 )
 anims/MoveLeft = SubResource( 7 )
 anims/MoveRight = SubResource( 8 )
 anims/MoveUp = SubResource( 9 )
+anims/Sit1Left = SubResource( 25 )
+anims/Sit1Right = SubResource( 24 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 22 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 23 )
 parameters/Idle/blend_position = Vector2( -0.0140406, 0.718497 )
 parameters/Move/blend_position = Vector2( 0.0873635, -0.37931 )
+parameters/Sit1/blend_position = Vector2( 0.24903, -0.155172 )

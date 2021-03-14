@@ -7,6 +7,7 @@ export(int) var FRICTION = 10000
 enum {
 	MOVE,
 	READ,
+	SIT1,
 	PHONE,
 	SHOPPING,
 }
@@ -16,6 +17,7 @@ var state = MOVE
 
 onready var idleSprite = $IdleSprite
 onready var moveSprite = $MoveSprite
+onready var sit1Sprite = $Sit1Sprite
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
@@ -55,5 +57,6 @@ func move():
 func change_sprite(sprite):
 	idleSprite.visible = false
 	moveSprite.visible = false
+	sit1Sprite.visible = false
 	sprite.visible = true
 	

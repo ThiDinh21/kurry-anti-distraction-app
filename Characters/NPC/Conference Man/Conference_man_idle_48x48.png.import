@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Adam_sit_48x48.png-101b46925059dbacace10876fd1783a4.stex"
+path="res://.import/Conference_man_idle_48x48.png-3526849828e263edf179582eb9070973.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Player/NPC/Adam/Adam_sit_48x48.png"
-dest_files=[ "res://.import/Adam_sit_48x48.png-101b46925059dbacace10876fd1783a4.stex" ]
+source_file="res://Characters/NPC/Conference Man/Conference_man_idle_48x48.png"
+dest_files=[ "res://.import/Conference_man_idle_48x48.png-3526849828e263edf179582eb9070973.stex" ]
 
 [params]
 
