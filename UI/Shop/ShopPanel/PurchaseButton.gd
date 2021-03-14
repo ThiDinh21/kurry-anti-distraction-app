@@ -9,7 +9,9 @@ func _process(_delta):
 func _buy(price):
 	if Global.game_state["currency"] >= price:
 		Global.game_state["currency"] -= price
+		currency = Global.game_state["currency"]
 		Global.save_game()
+		
 	else:
 		var rem = price - Global.game_state["currency"]
 		print(rem)

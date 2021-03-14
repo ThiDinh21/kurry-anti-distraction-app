@@ -1,13 +1,19 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor/FloorTileset1.png" type="Texture" id=2]
 [ext_resource path="res://Characters/Player/NPC/NPC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Furniture/Livingroom/Closet1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TextureButton.gd" type="Script" id=6]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
+		
+func _on_TextureButton_pressed():
+	get_tree().change_scene('res://UI/Menu.tscn')
+	
 "
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
@@ -244,7 +250,7 @@ tile_data = PoolIntArray( 589821, 0, 0, 589822, 0, 1, 589823, 0, 1, 524288, 0, 1
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 193.789, 648.554 )
+position = Vector2( -3.04871, 553.31 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 visible = false
@@ -252,9 +258,35 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Player/Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="YSort/Player/Camera2D/CanvasLayer"]
+margin_left = 394.94
+margin_top = 965.974
+margin_right = 527.94
+margin_bottom = 1066.97
+color = Color( 0.0862745, 0.529412, 0.721569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="YSort/Player/Camera2D/CanvasLayer"]
+margin_left = 388.297
+margin_top = 943.1
+margin_right = 688.297
+margin_bottom = 1243.1
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="NPC" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 85.2493, 632.925 )
 collision_layer = 2
 
 [node name="Closet1" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 375.646, 732.708 )
+position = Vector2( 352.954, 734.043 )
+[connection signal="pressed" from="YSort/Player/Camera2D/CanvasLayer/TextureButton" to="." method="_on_TextureButton_pressed"]

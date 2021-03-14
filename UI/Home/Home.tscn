@@ -54,10 +54,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 251.515
-margin_top = 179.407
-margin_right = 320.515
-margin_bottom = 448.407
+margin_left = 221.817
+margin_top = 169.507
+margin_right = 290.817
+margin_bottom = 574.508
 custom_fonts/font = ExtResource( 2 )
 text = "
 
