@@ -2,6 +2,7 @@ extends Control
 
 var scene_path_to_load
 func _ready():
+	MusicController.play_music()
 	$MenuBox/CenterRow/Buttons/HomeButton.grab_focus()
 	for button in $MenuBox/CenterRow/Buttons.get_children():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])

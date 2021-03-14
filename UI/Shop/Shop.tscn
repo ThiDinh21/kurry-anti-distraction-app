@@ -42,11 +42,11 @@ TabContainer/styles/tab_bg = SubResource( 2 )
 TabContainer/styles/tab_disabled = null
 TabContainer/styles/tab_fg = SubResource( 3 )
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=5]
 size = 45
 font_data = ExtResource( 11 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.368627, 0.235294, 0.0313726, 1 )
 border_width_left = 10
 border_width_top = 10
@@ -59,12 +59,12 @@ corner_radius_bottom_left = 10
 expand_margin_left = 5.0
 expand_margin_right = 5.0
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.309804, 0.698039, 0.0745098, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.764706, 0.807843, 0.133333, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -73,7 +73,7 @@ expand_margin_left = 5.0
 expand_margin_right = 5.0
 expand_margin_top = 5.0
 
-[sub_resource type="Theme" id=8]
+[sub_resource type="Theme" id=9]
 TabContainer/colors/font_color_bg = Color( 0.69, 0.69, 0.69, 1 )
 TabContainer/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 TabContainer/colors/font_color_fg = Color( 0.94, 0.94, 0.94, 1 )
@@ -89,14 +89,14 @@ TabContainer/icons/increment = null
 TabContainer/icons/increment_highlight = null
 TabContainer/icons/menu = null
 TabContainer/icons/menu_highlight = null
-TabContainer/styles/panel = SubResource( 5 )
-TabContainer/styles/tab_bg = SubResource( 6 )
+TabContainer/styles/panel = SubResource( 6 )
+TabContainer/styles/tab_bg = SubResource( 7 )
 TabContainer/styles/tab_disabled = null
-TabContainer/styles/tab_fg = SubResource( 7 )
+TabContainer/styles/tab_fg = SubResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=10]
 
-[sub_resource type="GDScript" id=10]
+[sub_resource type="GDScript" id=11]
 script/source = "extends Control
 
 func _on_BackButton_pressed():
@@ -137,7 +137,7 @@ __meta__ = {
 [node name="Cash" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 0.47451, 0.054902, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -148,8 +148,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 101.0
 margin_bottom = -2.0
-theme = SubResource( 8 )
-custom_styles/tab_fg = SubResource( 9 )
+theme = SubResource( 9 )
+custom_styles/tab_fg = SubResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -484,7 +484,7 @@ margin_right = 347.0
 margin_bottom = 1021.66
 custom_fonts/font = ExtResource( 9 )
 text = "Back"
-script = SubResource( 10 )
+script = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

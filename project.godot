@@ -23,6 +23,7 @@ run/main_scene="res://TestFloor.tscn"
 Global="*res://Singletons/Global.gd"
 FurnitureData="*res://Singletons/FurnitureData.gd"
 InventoryData="*res://Singletons/InventoryData.gd"
+MusicController="*res://UI/Setting/MusicController.tscn"
 
 [display]
 
