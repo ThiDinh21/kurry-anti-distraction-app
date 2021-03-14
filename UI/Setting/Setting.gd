@@ -1,7 +1,5 @@
 extends Control
 
-var setting_music = load("res://UI/Cianwood-City.wav") 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
