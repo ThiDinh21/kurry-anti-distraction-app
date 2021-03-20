@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Adam_48x48.png-fe5e12dd8ceecf528ef0b107b58f1e6c.stex"
+path="res://.import/Adam_idle_48x48.png-7b0c801178287cda81994d02403784cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Player/NPC/Adam/Adam_48x48.png"
-dest_files=[ "res://.import/Adam_48x48.png-fe5e12dd8ceecf528ef0b107b58f1e6c.stex" ]
+source_file="res://Characters/NPC/Adam/Adam_idle_48x48.png"
+dest_files=[ "res://.import/Adam_idle_48x48.png-7b0c801178287cda81994d02403784cc.stex" ]
 
 [params]
 

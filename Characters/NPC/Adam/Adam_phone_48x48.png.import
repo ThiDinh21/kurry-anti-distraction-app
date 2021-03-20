@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Adam_shopping_cart_48x48.png-3727957b2d64cd0e256ef1fbb76bde04.stex"
+path="res://.import/Adam_phone_48x48.png-4ea7064252f22d4c50aff9e204df9def.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Player/NPC/Adam/Adam_shopping_cart_48x48.png"
-dest_files=[ "res://.import/Adam_shopping_cart_48x48.png-3727957b2d64cd0e256ef1fbb76bde04.stex" ]
+source_file="res://Characters/NPC/Adam/Adam_phone_48x48.png"
+dest_files=[ "res://.import/Adam_phone_48x48.png-4ea7064252f22d4c50aff9e204df9def.stex" ]
 
 [params]
 
