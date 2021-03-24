@@ -34,4 +34,4 @@ func _on_7th_Floor_pressed():
 
 
 func _on_Last_Floor_pressed():
-	pass # Focus mode scene
+	get_tree().change_scene('res://FocusMode/FocusMode.tscn')
