@@ -21,6 +21,7 @@ onready var sit1Sprite = $Sit1Sprite
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+var facing = "r"
 
 func _ready():
 	animationTree.active = true
@@ -29,8 +30,14 @@ func _ready():
 
 func _physics_process(delta):
 	match state:
+		SIT1:
+			sit1_state()
 		MOVE:
 			move_state(delta)
+
+func sit1_state():
+	change_sprite(sit1Sprite)
+	animationState.travel("Sit1")
 
 func move_state(delta):
 	var inputVector = Vector2.ZERO

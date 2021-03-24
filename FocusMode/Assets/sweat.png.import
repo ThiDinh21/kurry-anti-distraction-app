@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3_shelves.png-15fa0e9069c7b032a703a30dcf4ce5d4.stex"
+path="res://.import/sweat.png-549f327d05c147b6b67dc541f73f6f13.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FocusMode/Assets/3_shelves.png"
-dest_files=[ "res://.import/3_shelves.png-15fa0e9069c7b032a703a30dcf4ce5d4.stex" ]
+source_file="res://FocusMode/Assets/sweat.png"
+dest_files=[ "res://.import/sweat.png-549f327d05c147b6b67dc541f73f6f13.stex" ]
 
 [params]
 

@@ -3,7 +3,8 @@
 [ext_resource path="res://UI/Shop/ShopPanel/PurchaseButton.gd" type="Script" id=1]
 [ext_resource path="res://UI/Shop/ShopPanel/PriceLabel.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/Silver_60.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Fonts/Silver_30.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Fonts/Silver_50.tres" type="DynamicFont" id=4]
+
 
 [node name="ShopPanel" type="Panel"]
 margin_right = 230.0
