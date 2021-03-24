@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Fonts/Silver_30.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/Buttons/ToHomeButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI/Leaderboard/GridContainer.gd" type="Script" id=4]
 
 [node name="Leaderboard" type="Control"]
 anchor_right = 1.0
@@ -22,46 +23,66 @@ __meta__ = {
 [node name="Label2" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -206.765
-margin_top = 14.4898
-margin_right = 211.235
-margin_bottom = 147.49
+margin_left = -228.0
+margin_right = 228.0
+margin_bottom = 133.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 5
-text = "Leaderboard"
+text = "Leaderboards"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
-margin_left = 26.0
-margin_top = 127.0
-margin_right = 527.0
-margin_bottom = 1061.0
-rect_clip_content = false
-custom_fonts/normal_font = ExtResource( 1 )
-bbcode_enabled = true
-bbcode_text = "[wave][rainbow freq=1 sat=0.5]| Username | Floor | Employee| Rank |
------------------------------------[/rainbow][/wave]
-| KhaBaNgo |   67  |    89    |   1   |
-|  Martial  |   54  |    70    |   2   | 
-| Rashford |   30  |    57    |   3   |
-|   Salah   |   12  |    29    |    4  |
-|  Hazard  |   04  |    08    |    5  |
-| Thi Dinh  |  00   |    00    |    6  |"
-text = "| Username | Floor | Employee| Rank |
------------------------------------
-| KhaBaNgo |   67  |    89    |   1   |
-|  Martial  |   54  |    70    |   2   | 
-| Rashford |   30  |    57    |   3   |
-|   Salah   |   12  |    29    |    4  |
-|  Hazard  |   04  |    08    |    5  |
-| Thi Dinh  |  00   |    00    |    6  |"
+[node name="Label5" type="Label" parent="ColorRect"]
+margin_left = 41.0
+margin_top = 147.0
+margin_right = 503.0
+margin_bottom = 224.0
+custom_fonts/font = ExtResource( 1 )
+text = "---------------------------------"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect"]
+margin_left = 41.0
+margin_top = 118.0
+margin_right = 514.0
+margin_bottom = 856.0
+columns = 4
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="Label" parent="ColorRect/GridContainer"]
+margin_right = 122.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = "Username|"
+
+[node name="Floors" type="Label" parent="ColorRect/GridContainer"]
+margin_left = 126.0
+margin_right = 228.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = " Floors|"
+
+[node name="Employees" type="Label" parent="ColorRect/GridContainer"]
+margin_left = 232.0
+margin_right = 362.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = " Employee|"
+
+[node name="Rank" type="Label" parent="ColorRect/GridContainer"]
+margin_left = 366.0
+margin_right = 434.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = " Rank"
 
 [node name="BackButton2" parent="ColorRect" instance=ExtResource( 2 )]
 anchor_left = 0.5

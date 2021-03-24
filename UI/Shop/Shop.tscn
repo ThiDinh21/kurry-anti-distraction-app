@@ -160,6 +160,7 @@ __meta__ = {
 }
 
 [node name="Characters" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -325,7 +326,6 @@ margin_bottom = 97.204
 text = "Fishmonger"
 
 [node name="Furniture" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -380,11 +380,12 @@ price = 70
 [node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Dumbweight" index="3"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -91.5
-margin_top = 36.0
-margin_right = 91.5
-margin_bottom = 103.0
-text = "DumbWeight"
+margin_left = -70.9865
+margin_top = 44.009
+margin_right = 84.0135
+margin_bottom = 111.009
+text = "Weight"
+align = 1
 
 [node name="Treadmill" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_top = 385.0
