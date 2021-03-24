@@ -68,6 +68,5 @@ func _on_ModeButton_toggled(button_pressed):
 		switch_project_mode()
 
 
-
-
-
+func _on_ExitButton_pressed():
+	get_tree().change_scene('res://TestFloor.tscn')
