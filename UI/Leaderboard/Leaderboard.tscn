@@ -50,7 +50,7 @@ bbcode_text = "[wave][rainbow freq=1 sat=0.5]| Username | Floor | Employee| Rank
 | Rashford |   30  |    57    |   3   |
 |   Salah   |   12  |    29    |    4  |
 |  Hazard  |   04  |    08    |    5  |
-| Thi Dinh  |  00   |    00    |   6   |"
+| Thi Dinh  |  00   |    00    |    6  |"
 text = "| Username | Floor | Employee| Rank |
 -----------------------------------
 | KhaBaNgo |   67  |    89    |   1   |
@@ -58,7 +58,7 @@ text = "| Username | Floor | Employee| Rank |
 | Rashford |   30  |    57    |   3   |
 |   Salah   |   12  |    29    |    4  |
 |  Hazard  |   04  |    08    |    5  |
-| Thi Dinh  |  00   |    00    |   6   |"
+| Thi Dinh  |  00   |    00    |    6  |"
 __meta__ = {
 "_edit_use_anchors_": false
 }
