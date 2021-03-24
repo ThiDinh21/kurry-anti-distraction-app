@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Fonts/Silver_80.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/Buttons/MenuButton.gd" type="Script" id=2]
+[ext_resource path="res://Themes/pixel_kurry.tres" type="Theme" id=3]
 
 [node name="MenuButton" type="Button"]
 margin_right = 393.0
 margin_bottom = 81.0
 rect_min_size = Vector2( 360, 60 )
+theme = ExtResource( 3 )
 flat = true
 script = ExtResource( 2 )
 __meta__ = {
