@@ -19,6 +19,7 @@ var mode = PROJECT_MODE
 
 onready var setTimerUI = $SetTimerUI
 onready var background = $Background
+onready var background2 = $SetTimerUI/TimerDisplay
 
 func _ready():
 	switch_project_mode()
@@ -47,6 +48,7 @@ func switch_project_mode():
 	self.add_child(newAnimation)
 	move_child(newAnimation, 2)
 	background.color = "bb7d3a"
+	background2.color = "bb7d3a"	
 
 func switch_deadline_mode():
 	mode = DEADLINE_MODE
@@ -57,6 +59,7 @@ func switch_deadline_mode():
 	self.add_child(newAnimation)
 	move_child(newAnimation, 2)
 	background.color = "f25814"
+	background2.color = "f25814"	
 
 func _on_ModeButton_toggled(button_pressed):
 	if button_pressed == true:
