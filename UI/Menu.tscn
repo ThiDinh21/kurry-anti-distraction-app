@@ -17,8 +17,8 @@ font_data = ExtResource( 7 )
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.25995
-margin_right = -1.25995
+margin_left = -2.25995
+margin_right = -2.25995
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -78,6 +78,12 @@ scene_to_load = "res://UI/Inventory/Inventory.tscn"
 margin_top = 270.0
 margin_bottom = 338.0
 scene_to_load = "res://UI/Leaderboard/Leaderboard.tscn"
+
+[node name="Label" parent="MenuBox/CenterRow/Buttons/LeaderboardButton" index="0"]
+margin_left = -132.5
+margin_top = -36.0
+margin_right = 177.5
+margin_bottom = 145.0
 
 [node name="SettingsButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 3 )]
 margin_top = 358.0
