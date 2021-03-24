@@ -274,6 +274,7 @@ script = ExtResource( 2 )
 MAX_SPEED = 250
 
 [node name="IdleSprite" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 1 )
 hframes = 24
 frame = 23
