@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://UI/home.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://UI/Buttons/InventoryButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/Buttons/SettingsButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/Buttons/AchievementButton.tscn" type="PackedScene" id=4]
@@ -26,23 +26,23 @@ __meta__ = {
 
 [node name="MenuBox" type="VBoxContainer" parent="."]
 margin_left = 79.0
-margin_top = 172.0
+margin_top = 40.0
 margin_right = 472.0
-margin_bottom = 1046.0
+margin_bottom = 1063.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LogoHome" type="TextureRect" parent="MenuBox"]
 margin_right = 393.0
-margin_bottom = 225.0
+margin_bottom = 300.0
 texture = ExtResource( 1 )
 stretch_mode = 4
 
 [node name="CenterRow" type="HBoxContainer" parent="MenuBox"]
-margin_top = 229.0
+margin_top = 304.0
 margin_right = 393.0
-margin_bottom = 729.0
+margin_bottom = 804.0
 size_flags_vertical = 3
 
 [node name="Buttons" type="VBoxContainer" parent="MenuBox/CenterRow"]
@@ -71,10 +71,10 @@ margin_right = 393.0
 margin_bottom = 250.0
 scene_to_load = "res://UI/Inventory/Inventory.tscn"
 
-[node name="AchievementButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 4 )]
+[node name="LeaderboardButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 4 )]
 margin_top = 270.0
 margin_bottom = 330.0
-scene_to_load = "res://UI/Achievement/Achievement.tscn"
+scene_to_load = "res://UI/Leaderboard/Leaderboard.tscn"
 
 [node name="SettingsButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 3 )]
 margin_top = 350.0
@@ -89,19 +89,19 @@ rect_min_size = Vector2( 360, 70 )
 scene_to_load = "res://UI/Home/Home.tscn"
 
 [node name="Label" parent="MenuBox/CenterRow/Buttons/BackButton" index="0"]
-margin_top = -2.88983
-margin_bottom = 158.109
+margin_top = -4.14972
+margin_bottom = 156.849
 text = "Back
 "
 
 [node name="VersionLabel" type="Label" parent="MenuBox"]
-margin_top = 733.0
+margin_top = 808.0
 margin_right = 393.0
-margin_bottom = 874.0
+margin_bottom = 1023.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
-text = "Version 0.0.1
-Makinen Studio"
+text = "Version 0.0.3
+QuiteAPop Studio"
 align = 1
 valign = 1
 
@@ -109,5 +109,7 @@ valign = 1
 visible = false
 [connection signal="pressed" from="MenuBox/CenterRow/Buttons/BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+
+[editable path="MenuBox/CenterRow/Buttons/LeaderboardButton"]
 
 [editable path="MenuBox/CenterRow/Buttons/BackButton"]

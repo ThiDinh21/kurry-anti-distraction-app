@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Shop/ShopPanel/ShopPanel.tscn" type="PackedScene" id=2]
+
+[node name="ShopPanel" instance=ExtResource( 2 )]
+
+[node name="PriceLabel" parent="." index="2"]
+price = 30
+
+[node name="NameLabel" parent="." index="3"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -50.5
+margin_top = 43.0
+margin_right = 50.5
+margin_bottom = 110.0
+text = "Toilet"
