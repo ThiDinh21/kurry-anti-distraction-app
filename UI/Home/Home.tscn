@@ -1,63 +1,63 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/Buttons/ToHomeButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Fonts/Silver_80.tres" type="DynamicFont" id=3]
 [ext_resource path="res://UI/Home/ScoreLabel.gd" type="Script" id=4]
+[ext_resource path="res://Building/last-floor.jpg" type="Texture" id=5]
+[ext_resource path="res://Building/5th-floor.jpg" type="Texture" id=6]
+[ext_resource path="res://Building/1st-floor.jpg" type="Texture" id=7]
+[ext_resource path="res://Building/2nd-floor.jpg" type="Texture" id=8]
+[ext_resource path="res://UI/Home/Home.gd" type="Script" id=9]
+[ext_resource path="res://Fonts/Silver_30.tres" type="DynamicFont" id=10]
 
 [node name="Home" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -270.0
-margin_top = -540.0
-margin_right = 270.0
-margin_bottom = 540.0
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.411765, 0.411765, 0.411765, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 83.0
-margin_top = 424.0
-margin_right = 457.0
-margin_bottom = 656.0
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+margin_left = 61.0
+margin_top = 32.0
+margin_right = 480.0
+margin_bottom = 129.0
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[wave]You have [tornado][rainbow freq=1 sat=0.5 val=1]8[/rainbow][/tornado] floors"
+text = "You have 8 floors"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 374.0
-margin_bottom = 133.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
-custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 5
-text = "Home Scene"
-
-[node name="BackButton2" parent="CenterContainer/VBoxContainer" instance=ExtResource( 1 )]
-
-[node name="Button" type="Button" parent="."]
-margin_left = 65.495
-margin_top = 284.461
-margin_right = 499.495
-margin_bottom = 379.461
+[node name="CashButton" type="Button" parent="ColorRect"]
+visible = false
+margin_left = 62.3407
+margin_top = 848.895
+margin_right = 496.341
+margin_bottom = 943.895
 custom_fonts/font = ExtResource( 3 )
 text = "Click to have cash"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 221.817
-margin_top = 169.507
-margin_right = 290.817
-margin_bottom = 574.508
+[node name="CashLabel" type="Label" parent="ColorRect"]
+visible = false
+margin_left = 222.0
+margin_top = 697.613
+margin_right = 291.0
+margin_bottom = 1102.61
 custom_fonts/font = ExtResource( 2 )
 text = "
 
@@ -66,4 +66,113 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button" to="Label" method="_on_Button_pressed"]
+
+[node name="BackButton" parent="ColorRect" instance=ExtResource( 1 )]
+margin_left = 216.133
+margin_top = 958.476
+margin_right = 328.133
+margin_bottom = 1053.48
+
+[node name="1st Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 123.444
+margin_top = 722.571
+margin_right = 225.444
+margin_bottom = 765.571
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+
+[node name="2nd Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 125.89
+margin_top = 674.48
+margin_right = 226.89
+margin_bottom = 693.48
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3rd Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 126.0
+margin_top = 625.0
+margin_right = 228.0
+margin_bottom = 644.0
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+
+[node name="4th Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 126.0
+margin_top = 577.0
+margin_right = 228.0
+margin_bottom = 596.0
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+
+[node name="5th Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 126.0
+margin_top = 483.0
+margin_right = 227.0
+margin_bottom = 502.0
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6th Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 126.0
+margin_top = 530.056
+margin_right = 228.0
+margin_bottom = 549.056
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+
+[node name="7th Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 128.988
+margin_top = 433.394
+margin_right = 229.988
+margin_bottom = 452.394
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Last Floor" type="TextureButton" parent="ColorRect"]
+margin_left = 160.151
+margin_top = 330.632
+margin_right = 237.151
+margin_bottom = 370.632
+rect_scale = Vector2( 3, 2.5 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 9.0
+margin_top = 101.0
+margin_right = 524.0
+margin_bottom = 292.0
+custom_fonts/font = ExtResource( 10 )
+text = "\"The key is in not spending time,
+ but in investing it.\" – Stephen R. Covey"
+align = 1
+valign = 1
+[connection signal="pressed" from="ColorRect/CashButton" to="ColorRect/CashLabel" method="_on_Button_pressed"]
+[connection signal="pressed" from="ColorRect/1st Floor" to="." method="_on_1st_Floor_pressed"]
+[connection signal="pressed" from="ColorRect/2nd Floor" to="." method="_on_2nd_Floor_pressed"]
+[connection signal="pressed" from="ColorRect/3rd Floor" to="." method="_on_3rd_Floor_pressed"]
+[connection signal="pressed" from="ColorRect/4th Floor" to="." method="_on_4th_Floor_pressed"]
+[connection signal="pressed" from="ColorRect/5th Floor" to="." method="_on_5th_Floor_pressed"]
+[connection signal="pressed" from="ColorRect/6th Floor" to="." method="_on_6th_Floor_pressed"]
+[connection signal="pressed" from="ColorRect/7th Floor" to="." method="_on_7th_Floor_pressed"]
+[connection signal="pressed" from="ColorRect/Last Floor" to="." method="_on_Last_Floor_pressed"]

@@ -17,7 +17,7 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
-		
+
 func _on_TextureButton_pressed():
 	get_tree().change_scene('res://UI/Menu.tscn')
 	
@@ -298,21 +298,5 @@ position = Vector2( 391.498, 555.171 )
 
 [node name="Dumbweight" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 206.885, 487.874 )
-position = Vector2( 271.397, 609.657 )
-collision_layer = 2
 
-[node name="Closet1" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 375.646, 732.708 )
-
-[node name="Mirror1" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 130.813, 466.9 )
-
-[node name="Shelf3" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( -50.1277, 782.913 )
-
-[node name="Shelf4" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 46.2705, 782.913 )
-
-[node name="Shelf5" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 377.212, 600.992 )
 [connection signal="pressed" from="YSort/Player/Camera2D/CanvasLayer/TextureButton" to="." method="_on_TextureButton_pressed"]
