@@ -80,7 +80,7 @@ scene_to_load = "res://UI/Achievement/Achievement.tscn"
 margin_top = 350.0
 margin_right = 393.0
 margin_bottom = 410.0
-scene_to_load = "res://UI/Settings/Settings.tscn"
+scene_to_load = "res://UI/Setting/Setting.tscn"
 
 [node name="BackButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 6 )]
 margin_top = 430.0
