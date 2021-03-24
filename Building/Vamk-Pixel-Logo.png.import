@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/home.png-3c8cd7246fe0a66508679f34af825b75.stex"
+path="res://.import/Vamk-Pixel-Logo.png-3262fc1a8e80a4d7a4edcfee823ece09.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/home.png"
-dest_files=[ "res://.import/home.png-3c8cd7246fe0a66508679f34af825b75.stex" ]
+source_file="res://Building/Vamk-Pixel-Logo.png"
+dest_files=[ "res://.import/Vamk-Pixel-Logo.png-3262fc1a8e80a4d7a4edcfee823ece09.stex" ]
 
 [params]
 

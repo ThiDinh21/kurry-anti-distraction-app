@@ -84,6 +84,8 @@ margin_left = -132.5
 margin_top = -36.0
 margin_right = 177.5
 margin_bottom = 145.0
+text = "Leaderboards
+"
 
 [node name="SettingsButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 3 )]
 margin_top = 358.0
