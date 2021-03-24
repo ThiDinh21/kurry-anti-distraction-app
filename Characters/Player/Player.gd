@@ -21,7 +21,6 @@ onready var sit1Sprite = $Sit1Sprite
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
-var facing = "r"
 
 func _ready():
 	animationTree.active = true

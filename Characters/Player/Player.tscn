@@ -141,7 +141,7 @@ tracks/0/keys = {
 "values": [ 6, 7, 8, 9, 10, 11 ]
 }
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=10]
 resource_name = "Sit1Left"
 length = 0.6
 loop = true
@@ -158,7 +158,7 @@ tracks/0/keys = {
 "values": [ 6, 7, 8, 9, 10, 11 ]
 }
 
-[sub_resource type="Animation" id=34]
+[sub_resource type="Animation" id=11]
 resource_name = "Sit1Right"
 length = 0.6
 loop = true
@@ -252,9 +252,9 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=28]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
 
 [sub_resource type="AnimationNodeStateMachine" id=31]
 states/Idle/node = SubResource( 16 )
@@ -263,7 +263,7 @@ states/Move/node = SubResource( 21 )
 states/Move/position = Vector2( 307, 104 )
 states/Sit1/node = SubResource( 26 )
 states/Sit1/position = Vector2( 125, -8 )
-transitions = [ "Idle", "Move", SubResource( 27 ), "Move", "Idle", SubResource( 28 ), "Idle", "Sit1", SubResource( 30 ), "Sit1", "Idle", SubResource( 35 ) ]
+transitions = [ "Idle", "Move", SubResource( 27 ), "Move", "Idle", SubResource( 28 ), "Idle", "Sit1", SubResource( 29 ), "Sit1", "Idle", SubResource( 30 ) ]
 start_node = "Idle"
 graph_offset = Vector2( -174, -51 )
 
@@ -304,8 +304,8 @@ anims/MoveDown = SubResource( 6 )
 anims/MoveLeft = SubResource( 7 )
 anims/MoveRight = SubResource( 8 )
 anims/MoveUp = SubResource( 9 )
-anims/Sit1Left = SubResource( 33 )
-anims/Sit1Right = SubResource( 34 )
+anims/Sit1Left = SubResource( 10 )
+anims/Sit1Right = SubResource( 11 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 31 )
