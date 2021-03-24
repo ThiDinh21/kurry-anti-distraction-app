@@ -319,4 +319,3 @@ __meta__ = {
 [connection signal="pressed" from="SetTimerUI/V/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="timeout" from="SetTimerUI/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="MenuButton" to="Menu" method="_on_MenuButton_pressed"]
-

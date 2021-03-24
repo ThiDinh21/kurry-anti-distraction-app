@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Fonts/Silver_30.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Silver_50.tres" type="DynamicFont" id=1]
 [ext_resource path="res://UI/Buttons/ToHomeButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=3]
 [ext_resource path="res://UI/Leaderboard/GridContainer.gd" type="Script" id=4]
@@ -36,21 +36,21 @@ __meta__ = {
 }
 
 [node name="Label5" type="Label" parent="ColorRect"]
-margin_left = 41.0
-margin_top = 147.0
-margin_right = 503.0
+margin_left = 27.0
+margin_top = 134.0
+margin_right = 569.0
 margin_bottom = 224.0
 custom_fonts/font = ExtResource( 1 )
-text = "---------------------------------"
+text = "--------------------------------"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="GridContainer" type="GridContainer" parent="ColorRect"]
-margin_left = 41.0
-margin_top = 118.0
-margin_right = 514.0
-margin_bottom = 856.0
+margin_left = 38.1684
+margin_top = 98.1787
+margin_right = 525.168
+margin_bottom = 836.179
 columns = 4
 script = ExtResource( 4 )
 __meta__ = {
@@ -58,29 +58,29 @@ __meta__ = {
 }
 
 [node name="Username" type="Label" parent="ColorRect/GridContainer"]
-margin_right = 122.0
-margin_bottom = 51.0
+margin_right = 138.0
+margin_bottom = 66.0
 custom_fonts/font = ExtResource( 1 )
 text = "Username|"
 
 [node name="Floors" type="Label" parent="ColorRect/GridContainer"]
-margin_left = 126.0
-margin_right = 228.0
-margin_bottom = 51.0
+margin_left = 142.0
+margin_right = 256.0
+margin_bottom = 66.0
 custom_fonts/font = ExtResource( 1 )
 text = " Floors|"
 
 [node name="Employees" type="Label" parent="ColorRect/GridContainer"]
-margin_left = 232.0
-margin_right = 362.0
-margin_bottom = 51.0
+margin_left = 260.0
+margin_right = 406.0
+margin_bottom = 66.0
 custom_fonts/font = ExtResource( 1 )
 text = " Employee|"
 
 [node name="Rank" type="Label" parent="ColorRect/GridContainer"]
-margin_left = 366.0
-margin_right = 434.0
-margin_bottom = 51.0
+margin_left = 410.0
+margin_right = 487.0
+margin_bottom = 66.0
 custom_fonts/font = ExtResource( 1 )
 text = " Rank"
 

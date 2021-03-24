@@ -3,16 +3,14 @@
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor/FloorTileset1.png" type="Texture" id=2]
 [ext_resource path="res://Characters/NPC/NPC.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Furniture/Livingroom/Mirror1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Furniture/Gym/Treadmill.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Furniture/Livingroom/Closet1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://TextureButton.gd" type="Script" id=6]
-[ext_resource path="res://Furniture/Gym/Treadmill.tscn" type="PackedScene" id=7]
+[ext_resource path="res://icon.png" type="Texture" id=7]
 [ext_resource path="res://Furniture/Gym/Dumbweight.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Furniture/Music-Sport/Mic.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Furniture/Music-Sport/Piano.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Furniture/Bathroom/Toilet.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Furniture/Livingroom/Shelf3.tscn" type="PackedScene" id=6]
-[ext_resource path="res://icon.png" type="Texture" id=7]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -45,6 +43,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 2, 2 ),
 "one_way": false,
@@ -118,6 +121,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 5 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 3, 1 ),
 "one_way": false,
@@ -189,6 +197,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 1/autotile/z_index_map = [  ]
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 14 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 2, 0 ),
 "one_way": false,
@@ -277,7 +290,6 @@ __meta__ = {
 }
 
 [node name="NPC" parent="YSort" instance=ExtResource( 3 )]
-
 position = Vector2( 118.547, 613.898 )
 collision_layer = 2
 
@@ -287,7 +299,7 @@ position = Vector2( -47.8429, 774.188 )
 [node name="Piano" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 316.204, 498.026 )
 
-[node name="Treadmill" parent="YSort" instance=ExtResource( 7 )]
+[node name="Treadmill" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 125.755, 504.323 )
 
 [node name="Toilet" parent="YSort" instance=ExtResource( 11 )]
@@ -298,5 +310,4 @@ position = Vector2( 391.498, 555.171 )
 
 [node name="Dumbweight" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 206.885, 487.874 )
-
 [connection signal="pressed" from="YSort/Player/Camera2D/CanvasLayer/TextureButton" to="." method="_on_TextureButton_pressed"]
