@@ -47,7 +47,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckButton" type="CheckButton" parent="."]
+[node name="ModeButton" type="CheckButton" parent="."]
 margin_left = 172.733
 margin_top = 11.8521
 margin_right = 374.733
@@ -58,6 +58,7 @@ text = "Deadline mode"
 flat = true
 align = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -214,13 +215,12 @@ one_shot = true
 [node name="Menu" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -542.639
-margin_top = 1.50735
-margin_right = -542.639
-margin_bottom = 1.50732
+margin_left = -540.67
+margin_top = 0.283218
+margin_right = -540.67
+margin_bottom = 0.283203
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -314,9 +314,9 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+[connection signal="toggled" from="ModeButton" to="." method="_on_ModeButton_toggled"]
 [connection signal="item_selected" from="SetTimerUI/V/V/H/TimePicker" to="SetTimerUI" method="_on_TimePicker_item_selected"]
 [connection signal="item_selected" from="SetTimerUI/V/V/H/CyclePicker" to="SetTimerUI" method="_on_CyclePicker_item_selected"]
 [connection signal="pressed" from="SetTimerUI/V/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="timeout" from="SetTimerUI/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="MenuButton" to="Menu" method="_on_MenuButton_pressed"]
-

@@ -23,6 +23,13 @@ var cycle = 1
 
 func _ready():
 	reset()
+	timePicker.add_item("25:00 | 05:00")
+	timePicker.add_item("50:00 | 10:00")
+	
+	cyclePicker.add_item("1")
+	cyclePicker.add_item("2")
+	cyclePicker.add_item("3")
+	cyclePicker.add_item("4")
 
 func reset():
 	state = STAND_BY
@@ -30,16 +37,6 @@ func reset():
 	cycle = 1
 	
 	timer.stop()
-	
-	timePicker.disabled = false
-	timePicker.add_item("25:00 | 05:00")
-	timePicker.add_item("50:00 | 10:00")
-	
-	cyclePicker.disabled = false
-	cyclePicker.add_item("1")
-	cyclePicker.add_item("2")
-	cyclePicker.add_item("3")
-	cyclePicker.add_item("4")
 	
 	timerDisplayLabel.text = ""
 	timerDisplay.visible = false

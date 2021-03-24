@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://FocusMode/Assets/animated_coffee_48x48.png" type="Texture" id=1]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://FocusMode/DeadlineModeAnimation.gd" type="Script" id=3]
-[ext_resource path="res://FocusMode/Assets/comp.png" type="Texture" id=4]
+[ext_resource path="res://FocusMode/Assets/computer1.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -40,28 +39,26 @@ animations = [ {
 [node name="DeadlineModeAnimation" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2.08185
-margin_top = 175.463
-margin_right = -2.08185
-margin_bottom = -283.537
-script = ExtResource( 3 )
+margin_top = 220.162
+margin_bottom = -325.838
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="comp" type="Sprite" parent="."]
-position = Vector2( 281.214, 300.088 )
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 239.523, 122.756 )
+scale = Vector2( 4, 4 )
+MAX_SPEED = 1
+
+[node name="Computer" type="Sprite" parent="."]
+position = Vector2( 287.421, 320.017 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
 
 [node name="Coffee" type="AnimatedSprite" parent="."]
-position = Vector2( 330.011, 265.3 )
+position = Vector2( 161.954, 284.856 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 7 )
-frame = 1
+frame = 4
 playing = true
-
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 198.593, 304.478 )
-scale = Vector2( 4, 4 )
+flip_h = true

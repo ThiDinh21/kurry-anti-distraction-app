@@ -1,32 +1,26 @@
 [gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=1]
-<<<<<<< HEAD
 [ext_resource path="res://Characters/NPC/Bob/Bob.png" type="Texture" id=2]
 [ext_resource path="res://Characters/NPC/Chef Robe/Chef_Robe.png" type="Texture" id=3]
 [ext_resource path="res://Characters/NPC/Butcher/Butcher_2_idle_48x48.png" type="Texture" id=4]
 [ext_resource path="res://Characters/NPC/Conference Man/Conference_man_idle_48x48.png" type="Texture" id=5]
-[ext_resource path="res://UI/Shop/Label.gd" type="Script" id=6]
-=======
-[ext_resource path="res://Characters/Player/NPC/Bob/Bob.png" type="Texture" id=2]
-[ext_resource path="res://Characters/Player/NPC/Chef Robe/Chef_Robe.png" type="Texture" id=3]
-[ext_resource path="res://Characters/Player/NPC/Butcher/Butcher_2_idle_48x48.png" type="Texture" id=4]
-[ext_resource path="res://Characters/Player/NPC/Conference Man/Conference_man_idle_48x48.png" type="Texture" id=5]
 [ext_resource path="res://UI/Shop/Furniture/Toilet.tscn" type="PackedScene" id=6]
->>>>>>> 2acc31464db6309f687fcdaa68418fa947ae3b1c
 [ext_resource path="res://UI/Shop/Shop.gd" type="Script" id=7]
 [ext_resource path="res://UI/Shop/Characters.gd" type="Script" id=8]
 [ext_resource path="res://Fonts/Silver_60.tres" type="DynamicFont" id=9]
 [ext_resource path="res://UI/Shop/ShopPanel/ShopPanel.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Fonts/Silver.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Characters/Player/NPC/Fishmonger/Fishmonger_1_idle_48x48.png" type="Texture" id=12]
+[ext_resource path="res://Characters/NPC/Fishmonger/Fishmonger_1_idle_48x48.png" type="Texture" id=12]
 [ext_resource path="res://Furniture/Bathroom/Toilet.png" type="Texture" id=13]
-[ext_resource path="res://Characters/Player/NPC/Edward/Edward_idle.png" type="Texture" id=14]
+[ext_resource path="res://Characters/NPC/Edward/Edward_idle.png" type="Texture" id=14]
 [ext_resource path="res://Furniture/Gym/dumbweight.png" type="Texture" id=15]
 [ext_resource path="res://Furniture/Music-Sport/Piano.png" type="Texture" id=16]
 [ext_resource path="res://Furniture/Livingroom/Assets/closet1.png" type="Texture" id=17]
 [ext_resource path="res://Furniture/Gym/Treadmill.png" type="Texture" id=18]
 [ext_resource path="res://Furniture/Music-Sport/Mic.png" type="Texture" id=19]
+
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.737255, 0.156863, 0.156863, 1 )
@@ -388,11 +382,12 @@ price = 70
 [node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Dumbweight" index="3"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -91.5
-margin_top = 36.0
-margin_right = 91.5
-margin_bottom = 103.0
-text = "DumbWeight"
+margin_left = -70.9865
+margin_top = 44.009
+margin_right = 84.0135
+margin_bottom = 111.009
+text = "Weight"
+align = 1
 
 [node name="Treadmill" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_top = 385.0

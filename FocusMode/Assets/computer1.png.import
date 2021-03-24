@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chair.png-5a7fa44e1ffeb308fddb823632363a26.stex"
+path="res://.import/computer1.png-38e05cdd0fd739a58b80e5642689f3e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FocusMode/Assets/chair.png"
-dest_files=[ "res://.import/chair.png-5a7fa44e1ffeb308fddb823632363a26.stex" ]
+source_file="res://FocusMode/Assets/computer1.png"
+dest_files=[ "res://.import/computer1.png-38e05cdd0fd739a58b80e5642689f3e3.stex" ]
 
 [params]
 
