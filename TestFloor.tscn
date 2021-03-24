@@ -1,9 +1,21 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor/FloorTileset1.png" type="Texture" id=2]
+[ext_resource path="res://Furniture/Livingroom/Shelf1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Furniture/Livingroom/Shelf3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Focus-button.jpg" type="Texture" id=6]
+[ext_resource path="res://Furniture/Livingroom/Shelf2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Furniture/Classroom/Alphabet/Alphabet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Furniture/Classroom/Board/Board.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Furniture/Classroom/Desk/Desk.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Furniture/Classroom/BucGiang/BucGiang.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Characters/NPC/Kid Abby/Kid Abby.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Characters/NPC/Haloween Kid/HaloweenKid.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Characters/NPC/Kid Karen/Kid Karen.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Characters/NPC/Kid Oscar/Kid Oscar.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Characters/NPC/Conference Woman/Conference Woman.tscn" type="PackedScene" id=16]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -40,6 +52,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 2, 2 ),
 "one_way": false,
@@ -113,6 +130,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 5 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 3, 1 ),
 "one_way": false,
@@ -184,6 +206,11 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 1/autotile/z_index_map = [  ]
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 14 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 2, 0 ),
 "one_way": false,
@@ -237,8 +264,53 @@ tile_data = PoolIntArray( 589821, 0, 0, 589822, 0, 1, 589823, 0, 1, 524288, 0, 1
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 0, -6.47534 )
 
+[node name="Shelf1" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -50.9373, 779.728 )
+
+[node name="Shelf2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 39.827, 780.577 )
+
+[node name="Shelf3" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 131.841, 780.948 )
+
+[node name="Board" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 212.24, 448.506 )
+
+[node name="Alphabet" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 387.448, 444.507 )
+
+[node name="BucGiang" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 125.405, 509.556 )
+
+[node name="Desk" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 113.195, 584.464 )
+
+[node name="Desk2" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 112.538, 662.89 )
+
+[node name="HaloweenKid" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 302.04, 591.809 )
+
+[node name="Desk3" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 299.798, 661.22 )
+
+[node name="Kid Abby" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 115.153, 586.146 )
+
+[node name="KidKaren" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 302.04, 661.656 )
+
+[node name="Kid Oscar" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 111.377, 672.038 )
+
+[node name="Desk4" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 297.89, 582.969 )
+
+[node name="Conference Woman" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 173.673, 481.376 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 366.018, 549.395 )
+position = Vector2( 287.815, 731.87 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 visible = false
