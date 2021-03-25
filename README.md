@@ -59,7 +59,7 @@ MIT License
 
    [kurry]: <https://github.com/galatea21/kurry-anti-distraction-app>
    [git-repo-url]: <https://github.com/galatea21/kurry-anti-distraction-app.git>
-   [Hackathon website]: <https://tulevaisuudenamk.fi/?lang=en>
+   [df1]: <https://tulevaisuudenamk.fi/?lang=en>
    [Godot]: <https://godotengine.org/>
 
    
