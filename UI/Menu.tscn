@@ -77,7 +77,7 @@ scene_to_load = "res://UI/Inventory/Inventory.tscn"
 [node name="LeaderboardButton" parent="MenuBox/CenterRow/Buttons" instance=ExtResource( 4 )]
 margin_top = 270.0
 margin_bottom = 338.0
-scene_to_load = "res://UI/Leaderboard/Leaderboard.tscn"
+scene_to_load = "res://UI/Leaderboards/Leaderboards.tscn"
 
 [node name="Label" parent="MenuBox/CenterRow/Buttons/LeaderboardButton" index="0"]
 margin_left = -132.5

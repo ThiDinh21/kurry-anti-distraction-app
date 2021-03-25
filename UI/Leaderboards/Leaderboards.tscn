@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/Silver_50.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI/Buttons/ToHomeButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI/Leaderboards/GridContainer.gd" type="Script" id=4]
+
+[node name="Leaderboards" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.411765, 0.411765, 0.411765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -228.0
+margin_right = 228.0
+margin_bottom = 133.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+text = "Leaderboards"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="ColorRect"]
+margin_left = 27.0
+margin_top = 134.0
+margin_right = 569.0
+margin_bottom = 224.0
+custom_fonts/font = ExtResource( 1 )
+text = "--------------------------------"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect"]
+margin_left = 38.1684
+margin_top = 98.1787
+margin_right = 525.168
+margin_bottom = 836.179
+columns = 4
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="Label" parent="ColorRect/GridContainer"]
+margin_right = 138.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 1 )
+text = "Username|"
+
+[node name="Floors" type="Label" parent="ColorRect/GridContainer"]
+margin_left = 142.0
+margin_right = 256.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 1 )
+text = " Floors|"
+
+[node name="Employees" type="Label" parent="ColorRect/GridContainer"]
+margin_left = 260.0
+margin_right = 409.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 1 )
+text = "Classmate|"
+
+[node name="Rank" type="Label" parent="ColorRect/GridContainer"]
+margin_left = 413.0
+margin_right = 490.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 1 )
+text = " Rank"
+
+[node name="BackButton2" parent="ColorRect" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -116.48
+margin_top = -122.98
+margin_right = 89.5203
+margin_bottom = -27.9795
