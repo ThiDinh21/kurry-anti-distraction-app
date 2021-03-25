@@ -12,15 +12,13 @@
 [ext_resource path="res://UI/Shop/ShopPanel/ShopPanel.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Fonts/Silver.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Characters/NPC/Fishmonger/Fishmonger_1_idle_48x48.png" type="Texture" id=12]
-[ext_resource path="res://Furniture/Bathroom/Toilet.png" type="Texture" id=13]
+[ext_resource path="res://Furniture/Classroom/Board/Board.png" type="Texture" id=13]
 [ext_resource path="res://Characters/NPC/Edward/Edward_idle.png" type="Texture" id=14]
-[ext_resource path="res://Furniture/Gym/dumbweight.png" type="Texture" id=15]
+[ext_resource path="res://Furniture/Classroom/BucGiang/BucGiang.png" type="Texture" id=15]
 [ext_resource path="res://Furniture/Music-Sport/Piano.png" type="Texture" id=16]
-[ext_resource path="res://Furniture/Livingroom/Assets/closet1.png" type="Texture" id=17]
-[ext_resource path="res://Furniture/Gym/Treadmill.png" type="Texture" id=18]
+[ext_resource path="res://Furniture/Classroom/Desk/Desk.png" type="Texture" id=17]
+[ext_resource path="res://Furniture/Classroom/Alphabet/Alphabet.png" type="Texture" id=18]
 [ext_resource path="res://Furniture/Music-Sport/Mic.png" type="Texture" id=19]
-
-
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.737255, 0.156863, 0.156863, 1 )
@@ -162,6 +160,7 @@ __meta__ = {
 }
 
 [node name="Characters" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -327,7 +326,6 @@ margin_bottom = 97.204
 text = "Fishmonger"
 
 [node name="Furniture" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -364,49 +362,56 @@ custom_constants/vseparation = 10
 custom_constants/hseparation = 30
 columns = 2
 
-[node name="Toilet" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 6 )]
+[node name="Alphabet" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 6 )]
 
-[node name="Texture" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Toilet" index="0"]
-texture = ExtResource( 13 )
+[node name="Texture" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Alphabet" index="0"]
+texture = ExtResource( 18 )
 
-[node name="Dumbweight" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+[node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Alphabet" index="3"]
+margin_left = -66.374
+margin_top = 41.4126
+margin_right = 79.626
+margin_bottom = 108.413
+text = "Alphabet"
+
+[node name="Board" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_left = 260.0
 margin_right = 490.0
 
-[node name="Texture" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Dumbweight" index="0"]
-texture = ExtResource( 15 )
+[node name="Texture" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Board" index="0"]
+texture = ExtResource( 13 )
 
-[node name="PriceLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Dumbweight" index="2"]
+[node name="PriceLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Board" index="2"]
 price = 70
 
-[node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Dumbweight" index="3"]
+[node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Board" index="3"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -70.9865
-margin_top = 44.009
-margin_right = 84.0135
-margin_bottom = 111.009
-text = "Weight"
+margin_left = -85.2731
+margin_top = 42.4216
+margin_right = 69.7269
+margin_bottom = 109.422
+text = "Board"
 align = 1
 
-[node name="Treadmill" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
+[node name="Lectern" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_top = 385.0
 margin_bottom = 760.0
 
-[node name="Texture" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Treadmill" index="0"]
-texture = ExtResource( 18 )
+[node name="Texture" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Lectern" index="0"]
+texture = ExtResource( 15 )
 
-[node name="PriceLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Treadmill" index="2"]
+[node name="PriceLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Lectern" index="2"]
 price = 100
 
-[node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Treadmill" index="3"]
+[node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Lectern" index="3"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -75.0
-margin_top = 28.0
-margin_right = 77.0
-margin_bottom = 95.0
-text = "Treadmill"
+margin_left = -60.7134
+margin_top = 23.2378
+margin_right = 91.2866
+margin_bottom = 90.2378
+text = "Lectern"
 
 [node name="Closet" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_left = 260.0
@@ -420,11 +425,11 @@ texture = ExtResource( 17 )
 [node name="NameLabel" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Closet" index="3"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -54.0
-margin_top = 20.0
-margin_right = 54.0
-margin_bottom = 87.0
-text = "Closet"
+margin_left = -38.0
+margin_top = 19.0
+margin_right = 38.0
+margin_bottom = 86.0
+text = "Desk"
 
 [node name="Mic" parent="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer" instance=ExtResource( 10 )]
 margin_top = 770.0
@@ -495,11 +500,11 @@ __meta__ = {
 
 [editable path="TabContainer/Characters/RichTextLabel/ScrollContainer/GridContainer/ShopPanel7"]
 
-[editable path="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Toilet"]
+[editable path="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Alphabet"]
 
-[editable path="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Dumbweight"]
+[editable path="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Board"]
 
-[editable path="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Treadmill"]
+[editable path="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Lectern"]
 
 [editable path="TabContainer/Furniture/RichTextLabel/ScrollContainer/GridContainer/Closet"]
 
