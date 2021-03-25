@@ -42,18 +42,6 @@ Decryption key: mOowa5ip4AZhNl9ODp0HqL3A9_6DZVEd0Ir6GOC6cBI
 
 
 
-
-
-
-
-License
-----
-
-MIT License
-
-
-**Free Software, Hell Yeah!**
-
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
 
