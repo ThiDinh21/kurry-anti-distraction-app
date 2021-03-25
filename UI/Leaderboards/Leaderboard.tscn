@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Buttons/ToHomeButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Silver_120.tres" type="DynamicFont" id=3]
+
+[node name="Leaderboard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.411765, 0.411765, 0.411765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -219.112
+margin_top = 18.9796
+margin_right = 236.888
+margin_bottom = 151.98
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+text = "Leaderboards"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton2" parent="ColorRect" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -116.48
+margin_top = -122.98
+margin_right = 89.5203
+margin_bottom = -27.9795

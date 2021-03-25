@@ -310,7 +310,7 @@ position = Vector2( 297.89, 582.969 )
 position = Vector2( 173.673, 481.376 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 287.815, 731.87 )
+position = Vector2( 210.365, 617.379 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 visible = false
