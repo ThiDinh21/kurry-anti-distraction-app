@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://FocusMode/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Silver_45.tres" type="DynamicFont" id=2]
 [ext_resource path="res://FocusMode/FocusMode.gd" type="Script" id=4]
 [ext_resource path="res://FocusMode/Assets/exit_true.png" type="Texture" id=7]
 [ext_resource path="res://FocusMode/Assets/exit_false.png" type="Texture" id=8]
@@ -62,20 +63,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="InspringQuotes" type="Label" parent="."]
+[node name="Slogan" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -267.842
-margin_top = 45.3686
-margin_right = 267.158
-margin_bottom = 219.369
-custom_fonts/font = ExtResource( 15 )
-text = "Something inspiring!"
+margin_left = -269.429
+margin_top = 86.6219
+margin_right = 265.571
+margin_bottom = 260.622
+custom_fonts/font = ExtResource( 2 )
+text = "Lack of discipline, not lack of time, is the problem."
 align = 1
 valign = 1
 autowrap = true
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

@@ -1,0 +1,132 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Silver_60.tres" type="DynamicFont" id=2]
+[ext_resource path="res://FocusMode/Assets/exit_false.png" type="Texture" id=10]
+[ext_resource path="res://FocusMode/Assets/exit_true.png" type="Texture" id=11]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends GridContainer
+
+const app_list = [
+	[\"fb-logo.png\", \"Facebook\", false],
+	[\"zoom-logo.png\", \"Zoom\", true],
+	[\"twitter-logo.png\", \"Twitter\", false],
+	[\"translate-logo.png\", \"Translate\", true],
+	[\"spotify-logo.png\", \"Spotify\", true],
+	[\"reddit-logo.png\", \"Reddit\", false],
+	[\"moodle-logo.png\", \"Moodle\", true],
+	[\"chrome-logo.png\", \"Chrome\", false],
+]
+
+func _ready():
+	for app in app_list:
+		var logo = TextureRect.new()
+		var label = Label.new()
+		logo.texture = load(\"res://FocusMode/Menu/AppLogos/\" + app[0])
+		self.add_child(logo)
+		
+		label.add_font_override(\"font\", load(\"res://Fonts/Silver_45.tres\"))
+		label.set_align(1)
+		label.set_valign(1)
+		label.text = app[1]
+		self.add_child(label)
+		
+		var button = CheckButton.new()
+		button.pressed = app[2]
+		self.add_child(button)
+		
+		
+		
+		
+
+
+"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends TextureButton
+
+
+func _on_ExitButton_button_down():
+	rect_pivot_offset.y += 10
+"
+
+[node name="WhiteListedApp" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.2041
+margin_top = 1.86987
+margin_right = -1.2041
+margin_bottom = 1.86987
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.67451, 0.490196, 0.290196, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 3.3241
+margin_top = 43.111
+margin_right = 545.324
+margin_bottom = 181.111
+custom_fonts/font = ExtResource( 2 )
+text = "Apps allowed while studying"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Seperator" type="Label" parent="."]
+margin_left = 0.460208
+margin_top = 91.7978
+margin_right = 542.46
+margin_bottom = 229.798
+custom_fonts/font = ExtResource( 2 )
+text = "---------------------------"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = 191.0
+margin_right = 2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AppList" type="GridContainer" parent="ScrollContainer"]
+custom_constants/vseparation = 20
+custom_constants/hseparation = 120
+columns = 3
+script = SubResource( 1 )
+
+[node name="ExitButton" type="TextureButton" parent="."]
+margin_left = 470.0
+margin_top = 10.0
+margin_right = 572.0
+margin_bottom = 117.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+script = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

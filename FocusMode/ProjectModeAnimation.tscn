@@ -7,15 +7,14 @@
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=5]
 
 [node name="ProjectModeAnimation" type="Control"]
-margin_left = 2.0
-margin_top = 281.0
-margin_right = 537.0
-margin_bottom = 738.0
+margin_left = 3.36041
+margin_top = 302.766
+margin_right = 538.36
+margin_bottom = 759.766
 size_flags_horizontal = 2
 size_flags_vertical = 2
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
