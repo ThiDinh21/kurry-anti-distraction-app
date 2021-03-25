@@ -39,14 +39,16 @@ animations = [ {
 [node name="DeadlineModeAnimation" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 220.162
-margin_bottom = -325.838
+margin_left = 1.43201
+margin_top = 233.05
+margin_right = 1.43201
+margin_bottom = -312.95
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 239.523, 122.756 )
+position = Vector2( 236.802, 133.639 )
 scale = Vector2( 4, 4 )
 MAX_SPEED = 1
 
@@ -59,6 +61,6 @@ texture = ExtResource( 4 )
 position = Vector2( 161.954, 284.856 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 7 )
-frame = 5
+frame = 1
 playing = true
 flip_h = true

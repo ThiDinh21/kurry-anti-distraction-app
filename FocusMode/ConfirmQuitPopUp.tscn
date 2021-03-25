@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/Silver_45.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Themes/pixel_kurry.tres" type="Theme" id=2]
+
+[node name="ConfirmQuitPopUp" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.58667
+margin_top = 309.814
+margin_right = 1.58667
+margin_bottom = -544.186
+rect_min_size = Vector2( 540, 200 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Border" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+color = Color( 0.411765, 0.411765, 0.411765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -230.0
+margin_top = -104.0
+margin_right = 212.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 1 )
+text = "Are you sure you want to quit? Your classmates will be sad!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="Button" parent="."]
+margin_left = 31.1709
+margin_top = 147.955
+margin_right = 261.171
+margin_bottom = 217.955
+theme = ExtResource( 2 )
+text = "Keep learning!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmButton" type="Button" parent="."]
+margin_left = 287.924
+margin_top = 146.333
+margin_right = 517.924
+margin_bottom = 216.333
+theme = ExtResource( 2 )
+text = "I am sure..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
