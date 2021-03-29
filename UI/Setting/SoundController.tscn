@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Click-Sound.wav" type="AudioStream" id=1]
+[ext_resource path="res://UI/Setting/SoundController.gd" type="Script" id=2]
+
+[node name="SoundController" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+bus = "Sound"

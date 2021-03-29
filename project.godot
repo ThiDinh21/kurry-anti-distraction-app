@@ -24,6 +24,7 @@ Global="*res://Singletons/Global.gd"
 FurnitureData="*res://Singletons/FurnitureData.gd"
 InventoryData="*res://Singletons/InventoryData.gd"
 MusicController="*res://UI/Setting/MusicController.tscn"
+SoundController="*res://UI/Setting/SoundController.tscn"
 
 [display]
 

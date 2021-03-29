@@ -1,26 +1,15 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Floor/FloorTileset1.png" type="Texture" id=2]
 [ext_resource path="res://Characters/NPC/NPC.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Furniture/Livingroom/Mirror1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Furniture/Livingroom/Closet1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://TextureButton.gd" type="Script" id=6]
-[ext_resource path="res://Furniture/Gym/Treadmill.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Furniture/Gym/Dumbweight.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Furniture/Music-Sport/Mic.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Furniture/Music-Sport/Piano.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Furniture/Bathroom/Toilet.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Furniture/Livingroom/Shelf3.tscn" type="PackedScene" id=6]
-[ext_resource path="res://icon.png" type="Texture" id=7]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
-
-func _on_TextureButton_pressed():
-	get_tree().change_scene('res://UI/Menu.tscn')
-	
+func _ready():
+	MusicController.play_music()
 "
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
@@ -255,10 +244,9 @@ format = 1
 tile_data = PoolIntArray( 589821, 0, 0, 589822, 0, 1, 589823, 0, 1, 524288, 0, 1, 524289, 0, 1, 524290, 0, 1, 524291, 0, 1, 524292, 0, 1, 524293, 0, 1, 524294, 0, 1, 524295, 0, 1, 524296, 0, 1, 524297, 0, 1, 524298, 0, 3, 655357, 0, 65536, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65539, 720893, 0, 65536, 655370, 0, 65539, 786429, 0, 65536, 720906, 0, 65539, 851965, 0, 65536, 786442, 0, 65539, 917501, 0, 65536, 851978, 0, 65539, 983037, 0, 65536, 917514, 0, 65539, 1048573, 0, 65536, 983050, 0, 65539, 1114109, 0, 65536, 1048586, 0, 65539, 1179645, 0, 65536, 1114122, 0, 65539, 1245181, 0, 65536, 1179658, 0, 65539, 1310717, 1, 0, 1310718, 1, 1, 1310719, 1, 1, 1245184, 1, 1, 1245185, 1, 1, 1245186, 1, 1, 1245187, 1, 1, 1245188, 1, 1, 1245189, 1, 1, 1245190, 1, 1, 1245191, 1, 1, 1245192, 1, 1, 1245193, 1, 1, 1245194, 1, 3 )
 
 [node name="YSort" type="YSort" parent="."]
-position = Vector2( 0, -6.47534 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 197.416, 658.538 )
+position = Vector2( 193.789, 648.554 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 visible = false
@@ -266,52 +254,9 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="YSort/Player/Camera2D"]
-
-[node name="ColorRect" type="ColorRect" parent="YSort/Player/Camera2D/CanvasLayer"]
-margin_left = 394.94
-margin_top = 965.974
-margin_right = 527.94
-margin_bottom = 1066.97
-color = Color( 0.0862745, 0.529412, 0.721569, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton" type="TextureButton" parent="YSort/Player/Camera2D/CanvasLayer"]
-margin_left = 388.297
-margin_top = 943.1
-margin_right = 688.297
-margin_bottom = 1243.1
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 7 )
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="NPC" parent="YSort" instance=ExtResource( 3 )]
-
-position = Vector2( 118.547, 613.898 )
+position = Vector2( 85.2493, 632.925 )
 collision_layer = 2
 
 [node name="Closet1" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( -47.8429, 774.188 )
-
-[node name="Piano" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 316.204, 498.026 )
-
-[node name="Treadmill" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 125.755, 504.323 )
-
-[node name="Toilet" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( -53.8177, 524.903 )
-
-[node name="Mic" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 391.498, 555.171 )
-
-[node name="Dumbweight" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 206.885, 487.874 )
-
-[connection signal="pressed" from="YSort/Player/Camera2D/CanvasLayer/TextureButton" to="." method="_on_TextureButton_pressed"]
+position = Vector2( 375.646, 732.708 )

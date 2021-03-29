@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Button Sound.wav-ba609ac76d804f9c9aa3ff447310e905.sample"
+path="res://.import/Click-Sound.wav-5c985c68635fcaf61f625541d204e9dc.sample"
 
 [deps]
 
-source_file="res://UI/Button Sound.wav"
-dest_files=[ "res://.import/Button Sound.wav-ba609ac76d804f9c9aa3ff447310e905.sample" ]
+source_file="res://UI/Click-Sound.wav"
+dest_files=[ "res://.import/Click-Sound.wav-5c985c68635fcaf61f625541d204e9dc.sample" ]
 
 [params]
 
